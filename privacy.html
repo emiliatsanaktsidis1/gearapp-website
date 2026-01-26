@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - GEAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: 800;
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+    }
+
+    .logo-wordmark {
+      height: 28px;
+      width: auto;
+    }
+
+    .logo-svg {
+      height: 52px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      color: #666;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #00bcd4;
+    }
+
+    .nav-cta {
+      background: #00bcd4;
+      color: #000;
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0, 188, 212, 0.4);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: #00bcd4;
+    }
+
+    .last-updated {
+      color: #888;
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 48px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      color: #555;
+      margin-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      border-top: 1px solid #333;
+      padding: 40px 24px;
+      text-align: center;
+      background: #1a1a1a;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links a {
+      color: #999;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #00bcd4;
+    }
+
+    .footer-copy {
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="index.html" class="logo">
+        <img src="gear-logo.svg" alt="GEAR" class="logo-svg">
+      </a>
+      <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#download">Download</a>
+      </div>
+      <a href="index.html#download" class="nav-cta">Get the App</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: 15 January 2025</p>
+
+    <p>Gear respects your privacy. We collect only necessary information to operate the platform, process payments through Stripe, and comply with legal obligations.</p>
+
+    <p>We do not store full payment details. Data may be retained where required for fraud prevention, legal compliance, or dispute resolution.</p>
+
+    <h2>Contact</h2>
+    <p>Email: support@gearapp.com.au</p>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="contact.html">Contact</a>
+      <a href="support.html">Support</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 GEAR. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - GEAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: 800;
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+    }
+
+    .logo-wordmark {
+      height: 28px;
+      width: auto;
+    }
+
+    .logo-svg {
+      height: 52px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      color: #666;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #00bcd4;
+    }
+
+    .nav-cta {
+      background: #00bcd4;
+      color: #000;
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0, 188, 212, 0.4);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: #00bcd4;
+    }
+
+    .intro {
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 48px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-bottom: 48px;
+    }
+
+    .contact-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 188, 212, 0.5);
+      box-shadow: 0 12px 40px rgba(0, 188, 212, 0.15);
+    }
+
+    .contact-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(0, 188, 212, 0.15);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .contact-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p {
+      color: #666;
+      margin-bottom: 16px;
+    }
+
+    .contact-card a {
+      color: #00bcd4;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    .email-cta {
+      background: linear-gradient(145deg, #00bcd4, #0097a7);
+      border-radius: 24px;
+      padding: 48px;
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    .email-icon {
+      width: 72px;
+      height: 72px;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .email-cta h2 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #000;
+      margin-bottom: 12px;
+    }
+
+    .email-cta p {
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 18px;
+      margin-bottom: 24px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .email-btn {
+      background: #000;
+      color: #fff;
+      padding: 16px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+
+    .email-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    footer {
+      border-top: 1px solid #333;
+      padding: 40px 24px;
+      text-align: center;
+      background: #1a1a1a;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links a {
+      color: #999;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #00bcd4;
+    }
+
+    .footer-copy {
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="index.html" class="logo">
+        <img src="gear-logo.svg" alt="GEAR" class="logo-svg">
+      </a>
+      <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#download">Download</a>
+      </div>
+      <a href="index.html#download" class="nav-cta">Get the App</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p class="intro">Have a question, feedback, or just want to say hello? We'd love to hear from you.</p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </div>
+        <h3>Instagram</h3>
+        <p>Follow us for updates and announcements.</p>
+        <a href="https://instagram.com/gear.au" target="_blank">@gear.au</a>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h3>In-App Support</h3>
+        <p>Get help directly from within the GEAR app.</p>
+        <a href="support.html">View FAQs</a>
+      </div>
+    </div>
+
+    <div class="email-cta">
+      <div class="email-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </div>
+      <h2>Get in Touch</h2>
+      <p>Have a question or need help? Send us an email and we'll get back to you.</p>
+      <a href="mailto:support@gearapp.com.au" class="email-btn">support@gearapp.com.au</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="contact.html">Contact</a>
+      <a href="support.html">Support</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 GEAR. All rights reserved.</p>
+  </footer>
+</body>
+</html>

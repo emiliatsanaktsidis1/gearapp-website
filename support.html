@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help & Support - GEAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: 800;
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+    }
+
+    .logo-wordmark {
+      height: 28px;
+      width: auto;
+    }
+
+    .logo-svg {
+      height: 52px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      color: #666;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #00bcd4;
+    }
+
+    .nav-cta {
+      background: #00bcd4;
+      color: #000;
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0, 188, 212, 0.4);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: #00bcd4;
+    }
+
+    .intro {
+      color: #666;
+      font-size: 18px;
+      margin-bottom: 48px;
+    }
+
+    .faq-category {
+      margin-bottom: 32px;
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px;
+      background: #f5f5f5;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .category-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(0, 188, 212, 0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .category-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #00bcd4;
+    }
+
+    .faq-list {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-top: none;
+      border-radius: 0 0 12px 12px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      padding: 16px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+    }
+
+    .faq-question:hover {
+      background: #f9f9f9;
+    }
+
+    .faq-question h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+    }
+
+    .faq-toggle {
+      color: #00bcd4;
+      font-size: 20px;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+
+    .faq-answer {
+      padding: 0 20px 16px;
+      color: #666;
+      display: none;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .faq-item.open .faq-toggle {
+      transform: rotate(45deg);
+    }
+
+    .support-cta {
+      background: linear-gradient(145deg, #00bcd4, #0097a7);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .support-cta h3 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #000;
+      margin-bottom: 12px;
+    }
+
+    .support-cta p {
+      color: rgba(0, 0, 0, 0.7);
+      margin-bottom: 24px;
+    }
+
+    .support-btn {
+      background: #000;
+      color: #fff;
+      padding: 14px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+
+    .support-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    footer {
+      border-top: 1px solid #333;
+      padding: 40px 24px;
+      text-align: center;
+      background: #1a1a1a;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links a {
+      color: #999;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #00bcd4;
+    }
+
+    .footer-copy {
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      .support-cta {
+        padding: 24px;
+      }
+
+      .category-title {
+        font-size: 18px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="index.html" class="logo">
+        <img src="gear-logo.svg" alt="GEAR" class="logo-svg">
+      </a>
+      <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#download">Download</a>
+      </div>
+      <a href="index.html#download" class="nav-cta">Get the App</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Help & Support</h1>
+    <p class="intro">Find answers to common questions or contact our support team.</p>
+
+    <!-- Buying Parts -->
+    <div class="faq-category">
+      <div class="category-header">
+        <div class="category-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"/>
+            <circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+        </div>
+        <span class="category-title">Buying Parts</span>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>How do I find parts?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Search by part name, make, model, or keyword. Use filters like price, condition, and location to narrow results.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>How do offers work?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Tap Make Offer, enter your price, and send. Sellers can accept, decline, or counter.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>How do I pay?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Pay securely in the app with credit/debit card, Apple Pay, or Google Pay. All payments are processed by Stripe. We don't support PayID, bank transfers, cash, or off-app payment methods.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Can I pay a seller outside the app?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">No. Off-platform payments aren't allowed and aren't protected. Accounts may be restricted or banned for trying.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>How does shipping work?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">After purchase, sellers ship the item and provide tracking. Shipping costs are shown on each listing before you buy.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What if my item doesn't arrive?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Report it in-app as soon as possible. We review tracking, messages, and listing details to determine next steps.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What if tracking says "delivered" but I didn't get it?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Orders are usually considered delivered when tracking shows delivery or a delivery attempt. Check around your property and contact the courier, then report it in-app if needed.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Do you offer refunds?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Refunds are only issued in cases of verified fraud (for example: no shipment, fake tracking, wrong item, or counterfeit). Change of mind, compatibility issues, and courier delays aren't refundable.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Selling Parts -->
+    <div class="faq-category">
+      <div class="category-header">
+        <div class="category-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+            <line x1="7" y1="7" x2="7.01" y2="7"/>
+          </svg>
+        </div>
+        <span class="category-title">Selling Parts</span>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>How do I list a part?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Tap Sell, add clear photos, accurate details, price, and shipping cost. Your listing goes live after submission.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Can I edit a listing?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Yes. Go to Profile → My Listings, select the item, and tap Edit.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>When do I have to ship?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">You must ship within 5 business days of payment, unless you clearly state a longer handling time in your listing.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>How do I set a shipping price?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Pack your item first, then weigh and measure it. Use Australia Post's calculator or ask at a post office to set your shipping price.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What proof do I need if there's a dispute?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Valid tracking is your main protection. Photos of the packaged item before shipping are also recommended.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Can I accept PayID or bank transfer?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">No. All GEAR transactions must be paid through the app. Off-platform payments aren't allowed and aren't protected.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>How do I get paid?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">To receive payments, sellers need to set up payouts. This is a quick, one-time step required to verify your account and send earnings securely.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What are GEAR's fees?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">GEAR takes a 10% marketplace fee on the total sale amount. This fee is automatically deducted when the buyer pays.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Disputes & Returns -->
+    <div class="faq-category">
+      <div class="category-header">
+        <div class="category-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"/>
+            <polyline points="1 20 1 14 7 14"/>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+          </svg>
+        </div>
+        <span class="category-title">Disputes & Returns</span>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What counts as "delivered"?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">An order is usually considered delivered when valid tracking shows delivery or a delivery attempt at the address or delivery area.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What happens if a seller doesn't ship?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">If there's no valid proof of shipment, the order may be treated as non-shipment and the buyer may be refunded.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Are courier delays refundable?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">No. Delays or in-transit issues are courier matters unless fraud is involved.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Who decides dispute outcomes?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">GEAR reviews tracking, messages, listings, and account history. Final decisions are made by GEAR.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Account & Security -->
+    <div class="faq-category">
+      <div class="category-header">
+        <div class="category-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <span class="category-title">Account & Security</span>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>How do I reset my password?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Tap Forgot Password on the login screen and follow the email instructions.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Is my payment information safe?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Yes. Payments are processed securely by Stripe. GEAR never stores full card details.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Safety & Trust -->
+    <div class="faq-category">
+      <div class="category-header">
+        <div class="category-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <span class="category-title">Safety & Trust</span>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>How do I report a suspicious user or listing?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Use the report option in the app or email support@gearapp.com.au with details.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Why are off-platform payments not allowed?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">They can't be tracked or protected and are the most common source of scams.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What happens if someone breaks the rules?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Listings may be removed, payouts held, or accounts suspended or banned.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="support-cta">
+      <h3>Still need help?</h3>
+      <p>Can't find what you're looking for? Our support team is here to help.</p>
+      <a href="mailto:support@gearapp.com.au" class="support-btn">Contact Support</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="contact.html">Contact</a>
+      <a href="support.html">Support</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 GEAR. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleFaq(element) {
+      const faqItem = element.parentElement;
+      faqItem.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

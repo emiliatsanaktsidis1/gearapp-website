@@ -63,8 +63,20 @@
     }
 
     .logo-svg {
-      height: 52px;
+      height: 250px;
       width: auto;
+    }
+
+    .nav-content {
+      position: relative;
+      height: 84px;
+    }
+
+    .nav-content .logo {
+      position: absolute;
+      top: 50%;
+      left: -5px;
+      transform: translateY(-38%);
     }
 
     .nav-links {
@@ -140,16 +152,50 @@
 
     footer {
       border-top: 1px solid #333;
-      padding: 40px 24px;
-      text-align: center;
+      padding: 10px 0 40px 0;
       background: #1a1a1a;
+      overflow: visible;
+      position: relative;
+    }
+
+    footer::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      background: #1a1a1a;
+      transform: translateY(100%);
+      z-index: -1;
+    }
+
+    .footer-content {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 40px;
+      padding: 30px 24px 0;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-content .logo {
+      position: absolute;
+      bottom: 0;
+      left: -10px;
+      transform: translateY(48%);
+    }
+
+    .footer-logo-svg {
+      height: 220px;
+      width: auto;
     }
 
     .footer-links {
       display: flex;
-      justify-content: center;
       gap: 32px;
-      margin-bottom: 16px;
     }
 
     .footer-links a {
@@ -245,13 +291,18 @@
   </div>
 
   <footer>
-    <div class="footer-links">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="contact.html">Contact</a>
-      <a href="support.html">Support</a>
+    <div class="footer-content">
+      <a href="index.html" class="logo">
+        <img src="gear-logo-white.png" alt="GEAR" class="footer-logo-svg">
+      </a>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+        <a href="contact.html">Contact</a>
+        <a href="support.html">Support</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 GEAR&trade;. All rights reserved.</p>
     </div>
-    <p class="footer-copy">&copy; 2026 GEAR. All rights reserved.</p>
   </footer>
 </body>
 </html>

@@ -250,14 +250,14 @@
   <!-- Content -->
   <div class="content">
     <h1>Terms of Service</h1>
-    <p class="updated">Last updated: 15 January 2025</p>
+    <p class="updated">Last updated: 6 February 2026</p>
 
     <h2>1. Introduction</h2>
     <p>Welcome to <strong>Gear</strong> (the "App"), a marketplace that allows users to buy and sell car parts. By creating an account or using Gear, you agree to these Terms of Service ("Terms"). If you do not agree, do not use the App.</p>
 
     <h2>2. Eligibility</h2>
     <ul>
-      <li>You are at least 16 years old;</li>
+      <li>You are at least 18 years old;</li>
       <li>You are legally able to enter into contracts;</li>
       <li>The information you provide is accurate and kept up to date.</li>
     </ul>
@@ -271,44 +271,47 @@
     <h2>5. Payments</h2>
     <p>Payments are processed by <strong>Stripe</strong>. By using Gear, you also agree to Stripe's terms and policies. Gear does not store complete credit card numbers. We receive tokens and limited payment data from Stripe to facilitate orders and payouts.</p>
 
-    <h2>6. Shipping</h2>
+    <h2>6. Seller Payouts</h2>
+    <h3>6.1 Payout Setup Requirement</h3>
+    <p>To receive payouts for sales, sellers must complete payout setup through Stripe Connect. If you receive a sale before completing payout setup, you will have <strong>72 hours</strong> to complete setup. If payout setup is not completed within this window, the order will be automatically cancelled and the buyer will be refunded.</p>
+
+    <h3>6.2 Marketplace Fee</h3>
+    <p>Gear charges a <strong>10% marketplace fee</strong> on the total sale amount (item price plus shipping). This fee is automatically deducted from your payout. For example, if you sell an item for $100 with $10 shipping, your payout will be $99 (90% of $110).</p>
+
+    <h3>6.3 Payout Holds &amp; Release Schedule</h3>
+    <p>To protect buyers and maintain marketplace integrity, seller payouts are held until fulfilment is confirmed. Payouts may also be subject to additional verification checks by Stripe or Gear before release.</p>
     <ul>
-      <li>Sellers must dispatch items within the timeframe stated in the listing.</li>
-      <li>If no handling timeframe is stated, sellers are expected to ship within a reasonable time, which is generally <strong>within 7 business days</strong> of payment confirmation.</li>
+      <li><strong>Tracked shipments:</strong> Payout is released <strong>3 business days</strong> after the tracking shows delivered. If tracking does not show delivered within 14 days, the payout will be released automatically.</li>
+      <li><strong>Untracked shipments:</strong> Payout is released <strong>10 business days</strong> after the seller marks the order as shipped.</li>
+    </ul>
+    <p>Business days exclude weekends (Saturday and Sunday) and are calculated based on Australian Eastern Time.</p>
+
+    <h3>6.4 Disputes and Refunds</h3>
+    <p>If an order is disputed or refunded before the payout is released, the pending payout will be voided. Gear reserves the right to hold or delay payouts if there is suspected fraud, policy violations, or ongoing disputes.</p>
+
+    <h3>6.5 Payout Processing</h3>
+    <p>Once a payout is released, it will be transferred to your connected Stripe account. The time it takes to reach your bank account depends on your bank and Stripe's processing times, which is typically 1&ndash;2 business days.</p>
+
+    <h2>7. Shipping, Buyer Protection &amp; Seller Protection</h2>
+    <p>The full details of our shipping, buyer protection, and seller protection policies are set out in the <a href="shipping-and-protection.html"><strong>Shipping &amp; Protection</strong></a> page, which is incorporated into and forms part of these Terms.</p>
+    <p>Key points:</p>
+    <ul>
+      <li>Sellers are responsible for packaging and shipping items, providing accurate shipping costs, and dispatching orders within the timeframe stated in the listing.</li>
       <li>Buyers are responsible for providing a correct delivery address and paying the stated shipping cost.</li>
-      <li>Gear is not responsible for lost, delayed, or damaged shipments. These remain the responsibility of the seller and/or the shipping carrier.</li>
+      <li>To the maximum extent permitted by law, Gear is not responsible for lost, delayed, or damaged shipments. These remain the responsibility of the seller and/or the shipping carrier.</li>
+      <li>If a parcel is confirmed lost, the buyer is refunded and the seller can claim from the carrier.</li>
+      <li>Gear facilitates the refund process but does not absorb shipping carrier losses.</li>
     </ul>
 
-    <h2>7. Refunds & Returns</h2>
-    <p>All sales on Gear are final, except where an item is <strong>significantly not as described</strong> in the listing.</p>
-
-    <h3>Refunds may be approved if:</h3>
-    <ul>
-      <li>The item received is materially different from the listing;</li>
-      <li>The seller stated incorrect specifications (e.g., wrong make/model/year);</li>
-      <li>The item is counterfeit or fraudulent.</li>
-    </ul>
-
-    <h3>Refunds are not available for:</h3>
+    <h2>8. Refunds and Returns</h2>
+    <p>All sales on Gear are final, except where required by applicable consumer protection laws. Gear does not offer returns or refunds except in cases of <strong>verified fraud</strong>. Fraud may include a seller never shipping an item, providing fake tracking, or sending a completely different or clearly counterfeit item.</p>
+    <p>Refunds are not available for:</p>
     <ul>
       <li>Change of mind;</li>
-      <li>Buyer error in fitment or compatibility;</li>
+      <li>Fitment or compatibility issues;</li>
       <li>Shipping delays or courier issues;</li>
-      <li>Wear or condition consistent with the listing;</li>
-      <li>Damage caused after delivery.</li>
-    </ul>
-
-    <h2>8. Disputes</h2>
-    <ul>
-      <li>Buyers must raise disputes within <strong>14 days</strong> of delivery.</li>
-      <li>All disputes are reviewed by Gear.</li>
-      <li><strong>Gear's decision is final and binding.</strong></li>
-    </ul>
-
-    <h3>Enforcement</h3>
-    <ul>
-      <li>Filing false or fraudulent disputes may result in account restriction or removal.</li>
-      <li>Attempting off-platform refunds or chargeback abuse may result in account restriction or removal.</li>
+      <li>Condition disputes that are not fraudulent;</li>
+      <li>Damage caused in transit by the courier.</li>
     </ul>
 
     <h2>9. Prohibited Listings</h2>
@@ -332,7 +335,7 @@
       <li>Use Gear for any unlawful purpose.</li>
     </ul>
 
-    <h2>11. Off-Platform Transactions (Strictly Prohibited)</h2>
+    <h2>Off-Platform Transactions (Strictly Prohibited)</h2>
     <p>All transactions on Gear must be completed entirely within the Gear App using Gear's approved payment systems.</p>
     <p>The following actions are strictly prohibited:</p>
     <ul>
@@ -345,7 +348,7 @@
     <p>Any transaction completed outside of Gear is not covered by Buyer Protection or Seller Protection, cannot be tracked or verified by Gear, and is conducted entirely at the users' own risk.</p>
     <p>Gear may take enforcement action for violations of this policy, including removing listings, restricting account features, holding payouts, suspending accounts, or permanently banning users.</p>
 
-    <h2>12. Seller Responsibilities</h2>
+    <h2>11. Seller Responsibilities</h2>
     <ul>
       <li>Accurately describe items, including condition and known defects;</li>
       <li>Use your own photos or properly licensed images, clearly showing the actual item;</li>
@@ -353,7 +356,7 @@
       <li>Comply with applicable consumer and product safety laws.</li>
     </ul>
 
-    <h2>13. Buyer Responsibilities</h2>
+    <h2>12. Buyer Responsibilities</h2>
     <ul>
       <li>Review listings carefully before purchasing;</li>
       <li>Check compatibility and fitment for your vehicle;</li>
@@ -361,13 +364,14 @@
       <li>Report suspected fraud or policy violations to Gear.</li>
     </ul>
 
-    <h2>14. Liability</h2>
-    <p>Gear is provided on an "as is" and "as available" basis. To the maximum extent permitted by law, Gear disclaims all warranties, express or implied. Gear is not liable for any indirect, incidental, or consequential losses, including but not limited to loss arising from buyer/seller conduct, shipping issues, or third-party services such as Stripe or couriers.</p>
+    <h2>13. Liability</h2>
+    <p>Gear is provided on an "as is" and "as available" basis. To the maximum extent permitted by law, Gear disclaims all warranties, express or implied. Gear is not liable for any indirect, incidental, or consequential losses, including but not limited to loss arising from buyer/seller conduct or shipping issues. Gear is not responsible for outages, delays, or errors caused by third-party services such as Stripe or shipping carriers, to the maximum extent permitted by law.</p>
+    <p><strong>Payment methods:</strong> Stripe checkout may offer supported digital wallets (such as Apple Pay or Google Pay) when available on your device.</p>
 
-    <h2>15. Account Suspension</h2>
-    <p>We may suspend or terminate any account, or remove listings, at our sole discretion if we believe a user has violated these Terms, engaged in fraud, or created risk for other users.</p>
+    <h2>14. Account Suspension</h2>
+    <p>We may suspend or terminate any account, or remove listings, at our reasonable discretion if we believe a user has violated these Terms, engaged in fraud, or created risk for other users.</p>
 
-    <h2>16. Account Deletion Restrictions During Investigations</h2>
+    <h2>15. Account Deletion Restrictions During Investigations</h2>
     <p>Users may not delete their Gear account while an investigation is active. Gear may temporarily block account deletion if:</p>
     <ul>
       <li>A fraud or scam investigation is in progress;</li>
@@ -379,10 +383,10 @@
     </ul>
     <p>During this period, the account may be restricted from deleting or modifying certain information, accessing payouts, or closing the account entirely. Gear may preserve account and transaction data as needed to comply with financial regulations, fraud prevention requirements, payment partner rules, and law enforcement requests. Accounts may only become eligible for deletion once all investigations, disputes, and compliance checks are fully resolved.</p>
 
-    <h2>17. Changes to These Terms</h2>
+    <h2>16. Changes to These Terms</h2>
     <p>We may update these Terms from time to time. If we make material changes, we may notify you via the App or by email. Your continued use of Gear after changes take effect constitutes acceptance of the revised Terms.</p>
 
-    <h2>18. Contact</h2>
+    <h2>17. Contact</h2>
     <p>For questions about these Terms, you can contact us at:</p>
     <p><strong>Email:</strong> support@gearapp.com.au</p>
   </div>
@@ -394,12 +398,12 @@
         <img src="gear-logo-white.png" alt="GEAR" class="footer-logo-svg">
       </a>
       <div class="footer-links">
-        <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-of-service.html">Terms of Service</a>
-        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="shipping-and-protection.html">Shipping &amp; Protection</a>
         <a href="support.html">Support</a>
       </div>
-      <p class="footer-copy">&copy; 2025 GEAR&trade;. All rights reserved.</p>
+      <p class="footer-copy">&copy; 2026 GEAR&trade;. All rights reserved.</p>
     </div>
   </footer>
 </body>

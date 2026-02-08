@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GEAR - Shipping &amp; Protection</title>
+  <title>Shipping & Protection - GEAR</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,24 +14,11 @@
       box-sizing: border-box;
     }
 
-    html {
-      height: 100%;
-    }
-
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #0b0f14;
-      color: #e8eef6;
+      background-color: #ffffff;
+      color: #333;
       line-height: 1.6;
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
     }
 
     /* Navigation */
@@ -81,18 +68,6 @@
       width: auto;
     }
 
-    .footer-logo-svg {
-      height: 220px;
-      width: auto;
-    }
-
-    .footer-content .logo {
-      position: absolute;
-      bottom: 0;
-      left: -10px;
-      transform: translateY(48%);
-    }
-
     .nav-links {
       display: flex;
       gap: 32px;
@@ -124,66 +99,74 @@
       box-shadow: 0 4px 20px rgba(0, 188, 212, 0.4);
     }
 
-    /* Main Content */
-    main {
-      flex: 1;
-      padding-top: 114px;
-      padding-bottom: 60px;
-    }
-
-    .content-card {
-      background: #0f1620;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 14px;
-      padding: 32px;
-      max-width: 980px;
+    /* Content */
+    .content {
+      max-width: 800px;
       margin: 0 auto;
+      padding: 120px 24px 80px;
     }
 
-    h1 {
-      margin: 0 0 6px;
-      font-size: 32px;
-      letter-spacing: -0.02em;
-      color: #e8eef6;
+    .content h1 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #333;
     }
 
-    h2 {
-      margin-top: 26px;
-      font-size: 22px;
-      color: #e8eef6;
+    .content .updated {
+      color: #666;
+      margin-bottom: 40px;
+      font-style: italic;
     }
 
-    h3 {
-      margin-top: 18px;
+    .content h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 16px;
+      color: #333;
+    }
+
+    .content h3 {
       font-size: 18px;
-      color: #e8eef6;
+      font-weight: 600;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      color: #333;
     }
 
-    h4 {
-      margin-top: 14px;
-      font-size: 16px;
-      color: #e8eef6;
+    .content p {
+      margin-bottom: 16px;
+      color: #555;
     }
 
-    p, li {
-      color: #e8eef6;
+    .content ul, .content ol {
+      margin-left: 24px;
+      margin-bottom: 16px;
     }
 
-    .muted {
-      color: #a9b4c2;
+    .content li {
+      margin-bottom: 8px;
+      color: #555;
     }
 
-    a {
+    .content strong {
+      color: #333;
+    }
+
+    .content a {
       color: #00bcd4;
       text-decoration: none;
     }
 
-    a:hover {
+    .content a:hover {
       text-decoration: underline;
     }
 
-    ul, ol {
-      padding-left: 22px;
+    .section-divider {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 48px 0;
     }
 
     /* Footer */
@@ -191,7 +174,6 @@
       border-top: 1px solid #333;
       padding: 10px 0 40px 0;
       background: #1a1a1a;
-      margin-top: auto;
       overflow: visible;
       position: relative;
     }
@@ -202,7 +184,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      height: 70px;
+      height: 50px;
       background: #1a1a1a;
       transform: translateY(100%);
       z-index: -1;
@@ -214,11 +196,21 @@
       justify-content: flex-end;
       align-items: center;
       gap: 40px;
-      padding-top: 30px;
+      padding: 30px 24px 0;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    footer .logo {
-      color: #00bcd4;
+    .footer-content .logo {
+      position: absolute;
+      bottom: 0;
+      left: -10px;
+      transform: translateY(48%);
+    }
+
+    .footer-logo-svg {
+      height: 220px;
+      width: auto;
     }
 
     .footer-links {
@@ -240,133 +232,17 @@
       color: #666;
     }
 
-    /* Responsive */
-    @media (max-width: 968px) {
-      .nav-links {
-        display: none;
+    @media (max-width: 768px) {
+      .content {
+        padding: 100px 16px 60px;
       }
-
-      .logo-svg {
-        height: 180px;
-      }
-
-      .footer-logo-svg {
-        height: 160px;
-      }
-
-      .content-card {
-        padding: 24px;
-      }
-
-      h1 {
+      .content h1 {
         font-size: 28px;
       }
-
-      h2 {
-        font-size: 20px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 0 16px;
-      }
-
-      nav {
-        height: 70px;
-      }
-
-      .nav-content {
-        padding: 12px 16px;
-        justify-content: space-between;
-      }
-
-      .nav-content .logo {
-        position: relative;
-        top: auto;
-        left: auto;
-        transform: none;
-      }
-
-      .logo-svg {
-        height: 120px;
-      }
-
-      .nav-cta {
-        padding: 8px 16px;
-        font-size: 14px;
-      }
-
-      main {
-        padding-top: 90px;
-        padding-bottom: 40px;
-      }
-
-      .content-card {
-        padding: 18px;
-        border-radius: 12px;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
-
-      h2 {
-        font-size: 18px;
-        margin-top: 22px;
-      }
-
-      h3 {
-        font-size: 16px;
-      }
-
-      h4 {
-        font-size: 15px;
-      }
-
-      p, li {
-        font-size: 14px;
-      }
-
-      footer {
-        padding: 20px 0 30px;
-      }
-
-      footer::after {
-        height: 30px;
-      }
-
       .footer-content {
         flex-direction: column;
-        gap: 20px;
+        gap: 24px;
         text-align: center;
-        padding-top: 20px;
-      }
-
-      .footer-content .logo {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        transform: none;
-        order: -1;
-      }
-
-      .footer-logo-svg {
-        height: 100px;
-      }
-
-      .footer-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
-      }
-
-      .footer-links a {
-        font-size: 14px;
-      }
-
-      .footer-copy {
-        font-size: 12px;
       }
     }
   </style>
@@ -386,178 +262,218 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main>
-    <div class="container">
-      <div class="content-card">
-        <h1>Gear - Shipping &amp; Protection</h1>
-        <p class="muted"><strong>Last updated:</strong> 8 February 2026</p>
+  <!-- Content -->
+  <div class="content">
+    <h1>Shipping &amp; Protection</h1>
+    <p class="updated">Last updated: 6 February 2026</p>
+    <p>This page contains Gear's policies on shipping, buyer protection, and seller protection. These policies are incorporated into and form part of the <a href="terms-of-service.html">Terms of Service</a>.</p>
 
-        <p>This page contains Gear's policies on shipping, buyer protection, and seller protection. These policies are incorporated into and form part of the Terms of Service.</p>
+    <hr class="section-divider">
 
-        <h2>Shipping Policy</h2>
-        <p>Gear is a marketplace platform. We do not physically handle, package, or ship items. Shipping is arranged and completed by sellers and their chosen couriers.</p>
+    <!-- SHIPPING POLICY -->
+    <h2>Shipping Policy</h2>
+    <p>Gear is a marketplace platform. We do not physically handle, package, or ship items. Shipping is arranged and completed by sellers and their chosen couriers.</p>
 
-        <h3>1. Seller Responsibilities</h3>
-        <ul>
-          <li>Accurately state shipping options, dispatch timeframes, and shipping costs in the listing.</li>
-          <li>Package items safely and securely to reduce damage in transit.</li>
-          <li>Ship within the timeframe stated on the listing (or within a reasonable time if no timeframe is stated).</li>
-          <li>Provide valid tracking information where available.</li>
-        </ul>
+    <h3>1. Seller Responsibilities</h3>
+    <ul>
+      <li>Accurately state shipping options, dispatch timeframes, and shipping costs in the listing.</li>
+      <li>Package items safely and securely to reduce damage in transit.</li>
+      <li>Ship within the timeframe stated on the listing (or within a reasonable time if no timeframe is stated).</li>
+      <li>Provide valid tracking information where available.</li>
+    </ul>
 
-        <h3>2. Buyer Responsibilities</h3>
-        <ul>
-          <li>Provide a complete and accurate delivery address at checkout.</li>
-          <li>Review shipping options and costs before purchasing.</li>
-          <li>Monitor tracking updates and contact the courier where appropriate.</li>
-        </ul>
+    <h3>2. Buyer Responsibilities</h3>
+    <ul>
+      <li>Provide a complete and accurate delivery address at checkout.</li>
+      <li>Review shipping options and costs before purchasing.</li>
+      <li>Monitor tracking updates and contact the courier where appropriate.</li>
+    </ul>
 
-        <h3>3. Tracking and Delivery</h3>
-        <p>An order is generally considered delivered when courier tracking indicates Delivered or an equivalent status (including delivery attempt at the buyer's address).</p>
-        <p>If tracking shows delivery to the correct area/address, Gear will not normally treat the order as undelivered unless there is evidence of fraud or a courier-confirmed delivery error.</p>
+    <h3>3. Tracking and Delivery</h3>
+    <p>An order is generally considered delivered when courier tracking indicates <strong>Delivered</strong> or an equivalent status (including delivery attempt at the buyer's address).</p>
+    <p>If tracking shows delivery to the correct area/address, Gear will not normally treat the order as undelivered unless there is evidence of fraud or a courier-confirmed delivery error.</p>
 
-        <h3>4. Lost Shipments</h3>
-        <p>If an item is confirmed lost in transit by the shipping carrier:</p>
-        <ul>
-          <li><strong>Buyer:</strong> Will receive a full refund.</li>
-          <li><strong>Seller:</strong> The pending payout will not be released. Sellers may lodge a claim with the shipping carrier or their shipping insurance provider.</li>
-          <li><strong>Gear:</strong> Facilitates the refund process but does not absorb shipping carrier losses.</li>
-        </ul>
+    <h3>4. Lost Shipments</h3>
+    <p>If an item is confirmed lost in transit by the shipping carrier:</p>
+    <ul>
+      <li><strong>Buyer:</strong> Will receive a full refund. Buyers should not pay for items they never received.</li>
+      <li><strong>Seller:</strong> The pending payout will not be released. Sellers may lodge a claim with the shipping carrier or their shipping insurance provider to recover the item value.</li>
+      <li><strong>Gear:</strong> Facilitates the refund process but does not absorb shipping carrier losses.</li>
+    </ul>
 
-        <h4>4.1 Tracked Shipments (Recommended)</h4>
-        <ul>
-          <li>If tracking confirms the parcel is lost, the buyer receives a full refund.</li>
-          <li>The seller's payout is not released (because delivery never occurred).</li>
-          <li>The seller can lodge a claim with the courier (Australia Post, Sendle, etc.).</li>
-          <li>If the seller purchased shipping insurance, they can claim the item value from the insurer.</li>
-        </ul>
+    <h3>4.1 Tracked Shipments (Recommended)</h3>
+    <p>If tracking confirms the parcel is lost:</p>
+    <ul>
+      <li>The buyer receives a full refund.</li>
+      <li>The seller's payout is not released (because delivery never occurred).</li>
+      <li>The seller can lodge a claim with the courier (Australia Post, Sendle, etc.) to recover the item value.</li>
+      <li>If the seller purchased shipping insurance, they can claim the full item value from the insurer.</li>
+    </ul>
 
-        <h4>4.2 Untracked Shipments</h4>
-        <ul>
-          <li>If the buyer reports non-delivery, the buyer is refunded.</li>
-          <li>The seller's payout is not released.</li>
-          <li>Without tracking, there is no proof of delivery, so the seller absorbs the loss.</li>
-        </ul>
-        <p><strong>We strongly recommend using tracked shipping for all orders.</strong></p>
+    <h3>4.2 Untracked Shipments</h3>
+    <p>If the seller shipped without tracking:</p>
+    <ul>
+      <li>If the buyer reports non-delivery, the buyer is refunded.</li>
+      <li>The seller's payout is not released.</li>
+      <li>Without tracking, there is no proof of delivery, so the seller absorbs the loss.</li>
+    </ul>
+    <p><strong>We strongly recommend using tracked shipping for all orders.</strong></p>
 
-        <h3>5. "Delivered" But Not Received</h3>
-        <ul>
-          <li>Buyer should check neighbours, building reception, or safe drop locations.</li>
-          <li>Wait 48 hours (some parcels are scanned delivered prematurely).</li>
-          <li>If still missing after 48 hours, contact Gear support through the App.</li>
-        </ul>
-        <p>For high-value items ($200+), Gear may request a statutory declaration or police report before processing a refund where tracking confirms delivery.</p>
-        <p>If tracking confirms delivery to the correct address, the seller is generally protected and the payout will proceed.</p>
+    <h3>5. "Delivered" But Not Received</h3>
+    <p>If tracking shows "Delivered" but the buyer claims non-receipt:</p>
+    <ol>
+      <li><strong>Check surroundings:</strong> Buyer should check with neighbours, building reception, or safe drop locations.</li>
+      <li><strong>Wait 48 hours:</strong> Sometimes parcels are scanned delivered prematurely.</li>
+      <li><strong>Contact Gear support:</strong> If the item still cannot be located after 48 hours.</li>
+      <li><strong>High-value items ($200+):</strong> Gear may request a statutory declaration or police report before processing a refund.</li>
+    </ol>
+    <p>If tracking confirms delivery to the correct address, the seller is generally protected and the payout will proceed.</p>
 
-        <h3>6. Damaged Shipments</h3>
-        <ul>
-          <li>Take photos of the item and packaging before discarding anything.</li>
-          <li>Notify the seller within 48 hours of receipt.</li>
-          <li>The seller should lodge a damage claim with the shipping carrier.</li>
-        </ul>
-        <p>Gear does not cover damage caused by shipping carriers, but may assist in dispute resolution.</p>
+    <h3>6. Damaged Shipments</h3>
+    <p>If an item arrives damaged due to transit:</p>
+    <ul>
+      <li><strong>Document immediately:</strong> Take photos of the item and packaging before discarding anything.</li>
+      <li><strong>Report to seller:</strong> Notify the seller within 48 hours of receipt.</li>
+      <li><strong>Carrier claim:</strong> The seller should lodge a damage claim with the shipping carrier.</li>
+    </ul>
+    <p>Gear does not cover damage caused by shipping carriers, but may assist in dispute resolution. Sellers who purchase shipping insurance can claim damages from their insurance provider.</p>
 
-        <h3>7. Delayed Shipments</h3>
-        <p>Delays caused by couriers, customs, weather, or operational issues are outside Gear's control. Gear does not provide refunds for delayed deliveries.</p>
+    <h3>7. Delayed Shipments</h3>
+    <p>Delays caused by couriers, customs, weather, or operational issues are outside Gear's control. Gear does not provide refunds for delayed deliveries.</p>
 
-        <h3>8. Shipping Recommendations for Sellers</h3>
-        <ul>
-          <li>Use tracked shipping (proof of delivery and claim support).</li>
-          <li>Consider shipping insurance for high-value items.</li>
-          <li>Package securely using appropriate materials.</li>
-          <li>Keep receipts and proof of postage for your records.</li>
-        </ul>
+    <h3>8. Shipping Recommendations for Sellers</h3>
+    <ul>
+      <li><strong>Use tracked shipping:</strong> Protects you with proof of delivery and allows you to claim from the courier if lost.</li>
+      <li><strong>Consider shipping insurance:</strong> For high-value items, insurance allows you to recover the full item value if lost or damaged.</li>
+      <li><strong>Package securely:</strong> Use appropriate packaging materials to prevent damage in transit.</li>
+      <li><strong>Keep receipts:</strong> Retain shipping receipts and proof of postage for your records.</li>
+    </ul>
 
-        <h2>Buyer Protection Policy</h2>
-        <p>Buyer Protection is designed to protect buyers from clear cases of fraud. It is not a general warranty program.</p>
+    <hr class="section-divider">
 
-        <h3>1. What Buyer Protection Covers</h3>
-        <ul>
-          <li>Non-shipment (no valid tracking or proof of shipment);</li>
-          <li>Fake tracking numbers or clearly invalid tracking;</li>
-          <li>Receiving an item that is completely different from the listing;</li>
-          <li>Receiving a clearly counterfeit item that was listed as genuine.</li>
-        </ul>
+    <!-- BUYER PROTECTION -->
+    <h2>Buyer Protection Policy</h2>
+    <p>Buyer Protection is designed to protect buyers from clear cases of fraud. It is not a general warranty program.</p>
 
-        <h3>2. Disputes and Item Not Received</h3>
-        <p>Buyers must notify Gear as soon as reasonably possible through the App. Gear may review tracking details, listing details, messages, and account history.</p>
-        <p>If valid tracking shows delivery, courier delays, or in-transit status, the issue is generally considered a courier matter and is not eligible for a refund unless Gear determines fraud.</p>
+    <h3>1. What Buyer Protection Covers</h3>
+    <p>You may be eligible for a refund where Gear determines that fraud occurred, including:</p>
+    <ul>
+      <li>Non-shipment (no valid tracking or proof of shipment);</li>
+      <li>Fake tracking numbers or clearly invalid tracking;</li>
+      <li>Receiving an item that is completely different from the listing;</li>
+      <li>Receiving a clearly counterfeit item that was listed as genuine.</li>
+    </ul>
 
-        <h3>3. Lost Parcels</h3>
-        <p>If your parcel is confirmed lost in transit by the shipping carrier, you will receive a full refund. The seller's payout will be withheld and the seller can lodge a claim with the shipping carrier.</p>
+    <h3>2. Disputes and Item Not Received</h3>
+    <p>If a buyer believes an item has not been received or that a transaction is disputed, the buyer must notify Gear as soon as reasonably possible through the App.</p>
+    <p>Gear may review available information, including:</p>
+    <ul>
+      <li>Tracking details and courier confirmations;</li>
+      <li>Listing descriptions and images;</li>
+      <li>Messages between buyer and seller;</li>
+      <li>Account history and risk indicators.</li>
+    </ul>
+    <p>An item is generally considered delivered when valid tracking information indicates delivery or a delivery attempt at the buyer's address or delivery area.</p>
+    <p>If a seller cannot provide valid proof of shipment or provides fake or invalid tracking, Gear may treat the transaction as non-shipment and may refund the buyer and reverse or withhold the seller's payout.</p>
+    <p>If valid tracking shows delivery, courier delays, or in-transit status, the issue is generally considered a courier matter and is not eligible for a refund, unless Gear determines fraud has occurred.</p>
+    <p>Gear's decision on disputes and non-delivery claims is final.</p>
 
-        <h3>4. Shipping Timeframe</h3>
-        <p>Sellers must ship items within 5 business days of payment confirmation, unless a longer handling time is clearly stated in the listing.</p>
+    <h3>3. Lost Parcels</h3>
+    <p>If your parcel is confirmed lost in transit by the shipping carrier:</p>
+    <ul>
+      <li><strong>You will receive a full refund.</strong> Buyers should not pay for items they never received.</li>
+      <li>The seller's payout will be withheld and the seller can lodge a claim with the shipping carrier.</li>
+    </ul>
 
-        <h3>5. What Buyer Protection Does Not Cover</h3>
-        <ul>
-          <li>Fitment or compatibility issues;</li>
-          <li>Change of mind;</li>
-          <li>Minor condition disputes where the listing was generally accurate;</li>
-          <li>Courier delays or courier-caused damage where the seller shipped as described;</li>
-          <li>Non-receipt claims where tracking confirms delivery, unless fraud is proven.</li>
-        </ul>
+    <h3>3.1 "Delivered" But Not Received</h3>
+    <p>If tracking shows "Delivered" but you haven't received your item:</p>
+    <ol>
+      <li><strong>Check your surroundings:</strong> Look around your property, check with neighbours, and contact building reception if applicable.</li>
+      <li><strong>Wait 48 hours:</strong> Sometimes parcels are scanned as delivered prematurely.</li>
+      <li><strong>Contact Gear support:</strong> If the item still cannot be located after 48 hours, contact us through the App.</li>
+    </ol>
+    <p>For high-value orders ($200+), Gear may request additional verification (such as a statutory declaration or police report) before processing a refund where tracking confirms delivery.</p>
 
-        <h3>6. How to Make a Claim</h3>
-        <p>Contact Gear through the App and provide order details, evidence (photos/videos), messages, and any courier or tracking information.</p>
+    <h3>4. Shipping Timeframe</h3>
+    <p>Sellers must ship items within <strong>5 business days</strong> of payment confirmation, unless a longer handling time is clearly stated in the listing.</p>
+    <p>If a seller fails to ship an item within the required timeframe and cannot provide valid proof of shipment, Gear may treat the transaction as non-shipment and may refund the buyer and reverse or withhold the seller's payout.</p>
 
-        <h2>Seller Protection Policy</h2>
-        <p>Seller Protection is intended to protect honest sellers from unfair refund demands while still allowing Gear to act in cases of fraud.</p>
+    <h3>5. What Buyer Protection Does Not Cover</h3>
+    <ul>
+      <li>Fitment or compatibility issues;</li>
+      <li>Change of mind;</li>
+      <li>Minor condition disputes where the listing was generally accurate;</li>
+      <li>Courier delays or courier-caused damage where the seller shipped as described;</li>
+      <li>Non-receipt claims where tracking confirms delivery, unless fraud is proven.</li>
+    </ul>
 
-        <h3>1. When Seller Protection Applies</h3>
-        <ul>
-          <li>Accurately describe the item, including condition and known defects;</li>
-          <li>Ship the correct item as listed;</li>
-          <li>Package the item appropriately;</li>
-          <li>Provide valid tracking that shows delivery.</li>
-        </ul>
+    <h3>6. How to Make a Claim</h3>
+    <p>Contact Gear through the App and provide order details, evidence (photos/videos), messages, and any courier or tracking information.</p>
 
-        <h3>2. Examples Where Sellers Are Protected</h3>
-        <ul>
-          <li>Buyer claims non-delivery but tracking confirms delivery;</li>
-          <li>Buyer is unhappy with compatibility or fitment after purchase;</li>
-          <li>Buyer reports courier delay after the item was shipped with valid tracking;</li>
-          <li>Buyer reports courier damage where the seller shipped the correct item.</li>
-        </ul>
+    <hr class="section-divider">
 
-        <h3>3. When Seller Protection Does Not Apply</h3>
-        <ul>
-          <li>Seller fails to ship or cannot provide valid proof of shipment;</li>
-          <li>Seller provides fake or clearly invalid tracking;</li>
-          <li>Seller ships a counterfeit item listed as genuine;</li>
-          <li>Seller ships an item completely different from the listing;</li>
-          <li>Other fraudulent or misleading conduct.</li>
-        </ul>
+    <!-- SELLER PROTECTION -->
+    <h2>Seller Protection Policy</h2>
+    <p>Seller Protection is intended to protect honest sellers from unfair refund demands and abusive behaviour, while still allowing Gear to act in cases of fraud.</p>
 
-        <h3>4. Lost Parcels</h3>
-        <p>If a parcel is lost in transit: the buyer is refunded; the seller's payout is not released. Sellers using tracked shipping can lodge a claim with the carrier or insurance provider. Sellers using untracked shipping absorb the loss.</p>
+    <h3>1. When Seller Protection Applies</h3>
+    <p>Sellers are generally protected when they:</p>
+    <ul>
+      <li>Accurately describe the item, including condition and known defects;</li>
+      <li>Ship the correct item as listed;</li>
+      <li>Package the item appropriately;</li>
+      <li>Provide valid tracking that shows delivery to the buyer's address or delivery area.</li>
+    </ul>
 
-        <h3>5. Gear's Actions</h3>
-        <p>Where Gear determines fraud has occurred, Gear may refund the buyer, reverse or withhold the seller's payout, and may restrict or suspend the seller's account.</p>
+    <h3>2. Examples Where Sellers Are Protected</h3>
+    <ul>
+      <li>A buyer claims non-delivery but tracking confirms delivery;</li>
+      <li>A buyer is unhappy with compatibility or fitment after purchase;</li>
+      <li>A buyer reports courier delay after the item was shipped with valid tracking;</li>
+      <li>A buyer reports courier damage where the seller shipped the correct item as described.</li>
+    </ul>
 
-        <h2>Contact</h2>
-        <p>For questions about these policies, contact: <a href="mailto:support@gearapp.com.au">support@gearapp.com.au</a></p>
-      </div>
-    </div>
-  </main>
+    <h3>3. When Seller Protection Does Not Apply</h3>
+    <ul>
+      <li>The seller fails to ship or cannot provide valid proof of shipment;</li>
+      <li>The seller provides fake or clearly invalid tracking;</li>
+      <li>The seller ships a counterfeit item listed as genuine;</li>
+      <li>The seller ships an item that is completely different from the listing;</li>
+      <li>Other fraudulent or misleading conduct.</li>
+    </ul>
+
+    <h3>4. Lost Parcels</h3>
+    <p>If a parcel is lost in transit:</p>
+    <ul>
+      <li>The buyer will be refunded (buyers should not pay for items they never received).</li>
+      <li>The seller's payout will not be released.</li>
+      <li><strong>Sellers using tracked shipping</strong> can lodge a claim with the shipping carrier or their insurance provider to recover the item value. This is why we recommend tracked shipping.</li>
+      <li><strong>Sellers using untracked shipping</strong> absorb the loss, as there is no proof of shipment or carrier record to claim against.</li>
+    </ul>
+    <p>Gear facilitates the refund process but does not absorb losses caused by shipping carriers. The party at fault (the carrier) is where claims should be directed.</p>
+
+    <h3>5. Gear's Actions</h3>
+    <p>Where Gear determines fraud has occurred, Gear may refund the buyer and reverse or withhold the seller's payout, and may restrict or suspend the seller's account.</p>
+
+    <h2>Contact</h2>
+    <p>For questions about these policies, you can contact us at:</p>
+    <p><strong>Email:</strong> support@gearapp.com.au</p>
+  </div>
 
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <div class="footer-content">
-        <a href="index.html" class="logo">
-          <img src="gear-logo-white.png" alt="GEAR" class="footer-logo-svg">
-        </a>
-        <div class="footer-links">
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <a href="terms-of-service.html">Terms of Service</a>
-          <a href="shipping-and-protection.html">Shipping</a>
-          <a href="contact.html">Contact</a>
-          <a href="support.html">Support</a>
-        </div>
-        <p class="footer-copy">&copy; 2025 GEAR. All rights reserved.</p>
+    <div class="footer-content">
+      <a href="index.html" class="logo">
+        <img src="gear-logo-white.png" alt="GEAR" class="footer-logo-svg">
+      </a>
+      <div class="footer-links">
+        <a href="terms-of-service.html">Terms of Service</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="shipping-and-protection.html">Shipping &amp; Protection</a>
+        <a href="contact.html">Contact</a>
+        <a href="support.html">Support</a>
       </div>
+      <p class="footer-copy">&copy; 2026 GEAR&trade;. All rights reserved.</p>
     </div>
   </footer>
 </body>

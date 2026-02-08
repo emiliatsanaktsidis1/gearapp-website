@@ -327,6 +327,10 @@
     }
 
     @media (max-width: 600px) {
+      html, body {
+        overflow-x: hidden;
+      }
+
       nav {
         height: 70px;
       }
@@ -354,6 +358,51 @@
 
       .content {
         padding: 90px 16px 40px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .intro {
+        font-size: 16px;
+        margin-bottom: 32px;
+      }
+
+      .category-header {
+        padding: 12px 16px;
+      }
+
+      .category-icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      .category-title {
+        font-size: 16px;
+      }
+
+      .faq-question {
+        padding: 14px 16px;
+      }
+
+      .faq-question h3 {
+        font-size: 14px;
+      }
+
+      .faq-answer {
+        padding: 0 16px 14px;
+        font-size: 14px;
+      }
+
+      .support-cta h3 {
+        font-size: 20px;
+      }
+
+      .support-cta p {
+        font-size: 14px;
       }
 
       footer {

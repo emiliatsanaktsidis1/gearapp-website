@@ -232,6 +232,10 @@
     }
 
     @media (max-width: 600px) {
+      html, body {
+        overflow-x: hidden;
+      }
+
       nav {
         height: 70px;
       }
@@ -259,6 +263,29 @@
 
       .content {
         padding: 90px 16px 40px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .content h1 {
+        font-size: 26px;
+      }
+
+      .content h2 {
+        font-size: 20px;
+        margin-top: 32px;
+      }
+
+      .content h3 {
+        font-size: 16px;
+      }
+
+      .content p, .content li {
+        font-size: 15px;
+      }
+
+      .content ul {
+        margin-left: 20px;
       }
 
       footer {

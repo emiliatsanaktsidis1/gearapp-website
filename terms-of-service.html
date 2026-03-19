@@ -1,512 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service - GEAR</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GEAR – Terms of Service</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --bg:#0b0f14;
+      --card:#0f1620;
+      --text:#e8eef6;
+      --muted:#a9b4c2;
+      --link:#00bcd4;
+      --border:rgba(255,255,255,0.08);
     }
-
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #ffffff;
-      color: #333;
-      line-height: 1.6;
+      margin:0; padding:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
     }
-
-    /* Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 84px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      z-index: 100;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-content {
-      position: relative;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 32px;
-      padding: 16px 24px;
-      max-width: 1200px;
-      margin: 0 auto;
-      height: 100%;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 24px;
-      font-weight: 800;
-      color: #00bcd4;
-      text-decoration: none;
-    }
-
-    .nav-content .logo {
-      position: absolute;
-      top: 50%;
-      left: -5px;
-      transform: translateY(-38%);
-    }
-
-    .logo-svg {
-      height: 250px;
-      width: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-    }
-
-    .nav-links a {
-      color: #666;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: #00bcd4;
-    }
-
-    .nav-cta {
-      background: #00bcd4;
-      color: #000;
-      padding: 10px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .nav-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 20px rgba(0, 188, 212, 0.4);
-    }
-
-    /* Content */
-    .content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 120px 24px 80px;
-    }
-
-    .content h1 {
-      font-size: 36px;
-      font-weight: 800;
-      margin-bottom: 8px;
-      color: #333;
-    }
-
-    .content .updated {
-      color: #666;
-      margin-bottom: 40px;
-      font-style: italic;
-    }
-
-    .content h2 {
-      font-size: 24px;
-      font-weight: 700;
-      margin-top: 40px;
-      margin-bottom: 16px;
-      color: #333;
-    }
-
-    .content h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin-top: 24px;
-      margin-bottom: 12px;
-      color: #333;
-    }
-
-    .content p {
-      margin-bottom: 16px;
-      color: #555;
-    }
-
-    .content ul {
-      margin-left: 24px;
-      margin-bottom: 16px;
-    }
-
-    .content li {
-      margin-bottom: 8px;
-      color: #555;
-    }
-
-    .content strong {
-      color: #333;
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid #333;
-      padding: 10px 0 40px 0;
-      background: #1a1a1a;
-      overflow: visible;
-      position: relative;
-    }
-
-    footer::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 50px;
-      background: #1a1a1a;
-      transform: translateY(100%);
-      z-index: -1;
-    }
-
-    .footer-content {
-      position: relative;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 40px;
-      padding: 30px 24px 0;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .footer-content .logo {
-      position: absolute;
-      bottom: 0;
-      left: -10px;
-      transform: translateY(48%);
-    }
-
-    .footer-logo-svg {
-      height: 220px;
-      width: auto;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 32px;
-    }
-
-    .footer-links a {
-      color: #999;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover {
-      color: #00bcd4;
-    }
-
-    .footer-copy {
-      color: #666;
-    }
-
-    @media (max-width: 968px) {
-      .nav-links {
-        display: none;
-      }
-
-      .logo-svg {
-        height: 180px;
-      }
-
-      .footer-logo-svg {
-        height: 160px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      body {
-        overflow-x: hidden;
-      }
-
-      nav {
-        height: 90px;
-      }
-
-      .nav-content {
-        padding: 0 16px;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-      }
-
-      .nav-content .logo {
-        position: relative;
-        top: 20px;
-        left: auto;
-        transform: none;
-        display: flex;
-        align-items: center;
-        height: 100%;
-      }
-
-      .logo-svg {
-        height: 200px;
-      }
-
-      .nav-cta {
-        padding: 14px 24px;
-        font-size: 16px;
-        border-radius: 10px;
-      }
-
-      .content {
-        padding: 120px 16px 40px;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-      }
-
-      .content h1 {
-        font-size: 26px;
-      }
-
-      .content h2 {
-        font-size: 20px;
-        margin-top: 32px;
-      }
-
-      .content h3 {
-        font-size: 16px;
-      }
-
-      .content p, .content li {
-        font-size: 15px;
-      }
-
-      .content ul {
-        margin-left: 20px;
-      }
-
-      footer {
-        padding: 10px 0 40px;
-      }
-
-      footer::after {
-        height: 8px;
-      }
-
-      .footer-content {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-        padding-top: 20px;
-      }
-
-      .footer-content .logo {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        transform: none;
-        order: -1;
-      }
-
-      .footer-logo-svg {
-        height: 100px;
-      }
-
-      .footer-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
-      }
-
-      .footer-links a {
-        font-size: 14px;
-      }
-
-      .footer-copy {
-        font-size: 12px;
-      }
-    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 60px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
+    h1 { margin: 0 0 6px; font-size: 32px; letter-spacing: -0.02em; }
+    h2 { margin-top: 26px; font-size: 22px; }
+    h3 { margin-top: 18px; font-size: 18px; }
+    p, li { color: var(--text); }
+    .muted { color: var(--muted); }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 22px; }
+    ol { padding-left: 22px; }
+    hr { border:0; border-top:1px solid var(--border); margin: 18px 0; }
+    .pill { display:inline-block; padding: 2px 10px; border:1px solid var(--border); border-radius: 999px; color: var(--muted); font-size: 12px; }
+    .toc a { display:block; padding: 6px 0; }
+    .note { background: rgba(0,188,212,0.10); border: 1px solid rgba(0,188,212,0.25); padding: 12px 14px; border-radius: 12px; }
+    code { background: rgba(255,255,255,0.06); padding: 0 6px; border-radius: 6px; }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-content">
-      <a href="index.html" class="logo">
-        <img src="gear-logo.svg" alt="GEAR" class="logo-svg">
-      </a>
-      <div class="nav-links">
-        <a href="index.html#features">Features</a>
-        <a href="index.html#download">Download</a>
-      </div>
-      <a href="index.html#download" class="nav-cta">Get the App</a>
+  <div class="wrap">
+    <div class="card">
+      <h1>Gear – Terms of Service</h1>
+      <p class="muted"><strong>Last updated:</strong> 19 March 2026</p>
+      
+<p>Welcome to Gear (the “App”), a marketplace that allows users to buy and sell car parts. By creating an account or using Gear, you agree to these Terms of Service (“Terms”). If you do not agree, do not use the App.</p>
+
+<h2 id=”definitions”>1. Definitions</h2>
+<ul>
+  <li><strong>”Platform”</strong> means the GEAR mobile application, website, and all related services and features.</li>
+  <li><strong>”App”</strong> means the GEAR mobile application.</li>
+  <li><strong>”Services”</strong> means all services provided by Gear through the Platform.</li>
+  <li><strong>”Buyer”</strong> means a user who purchases or bids on an item listed on the Platform.</li>
+  <li><strong>”Seller”</strong> means a user who lists an item for sale on the Platform.</li>
+  <li><strong>”Listing”</strong> means an item posted for sale on the Platform, including Buy Now, Auction, and Hybrid listings.</li>
+  <li><strong>”Order”</strong> means a completed and paid transaction between a Buyer and a Seller through the Platform.</li>
+  <li><strong>”Order Address”</strong> means the delivery address provided by the Buyer at checkout for an Order.</li>
+  <li><strong>”Payout”</strong> means the transfer of sale proceeds to a Seller's connected Stripe account, after deduction of the Marketplace Fee.</li>
+  <li><strong>”Marketplace Fee”</strong> means the 10% fee charged by Gear on the total sale amount (item price plus shipping).</li>
+  <li><strong>”Buyer Protection”</strong> means the protections provided to Buyers as set out in the Shipping &amp; Protection policy, which is incorporated into these Terms.</li>
+  <li><strong>”Seller Protection”</strong> means the protections provided to Sellers as set out in the Shipping &amp; Protection policy, which is incorporated into these Terms.</li>
+  <li><strong>”Supported Carrier”</strong> means Australia Post, DHL, FedEx, UPS, StarTrack, TNT, Aramex, or Couriers Please.</li>
+  <li><strong>”Tracked Shipping”</strong> means a shipment sent via a Supported Carrier with Valid Tracking.</li>
+  <li><strong>”Valid Tracking”</strong> means a tracking number issued by a Supported Carrier that shows verifiable shipment progress and delivery status.</li>
+  <li><strong>”Delivery Confirmation”</strong> means a tracking status provided by a Supported Carrier indicating that an item has been delivered to the Order Address or delivery area.</li>
+  <li><strong>”Stripe”</strong> means the third-party payment processing platform used by Gear to facilitate payments and payouts.</li>
+  <li><strong>”Stripe Connect”</strong> means the Stripe service that enables Sellers to receive payouts from sales on the Platform.</li>
+  <li><strong>”In-App Payment System”</strong> means the payment system provided through the Platform using Stripe or other approved payment providers.</li>
+  <li><strong>”Auction”</strong> means a Listing where Buyers place bids and the highest valid bidder at the end of the auction period wins the item.</li>
+  <li><strong>”Hybrid Listing”</strong> means a Listing that offers both a Buy Now price and the ability for Buyers to place bids.</li>
+  <li><strong>”Buy Now”</strong> means a fixed-price Listing where a Buyer can purchase the item immediately at the listed price.</li>
+  <li><strong>”Reserve Price”</strong> means a hidden minimum price set by the Seller on an Auction. If bidding does not reach the Reserve Price, the item will not be sold.</li>
+  <li><strong>”Anti-Sniping”</strong> means a feature where the Platform may automatically extend an Auction's end time when a bid is placed within the final minutes, to promote fair bidding.</li>
+  <li><strong>”Off-Platform Transaction”</strong> means any payment, trade, or transaction conducted outside the Platform and its In-App Payment System.</li>
+  <li><strong>”Fraud”</strong> means any activity that Gear reasonably determines to be deceptive, dishonest, or intended to mislead or exploit another user or the Platform, including but not limited to fake listings, false tracking, non-shipment, counterfeit items, or payment abuse.</li>
+  <li><strong>”Prohibited Conduct”</strong> means any behaviour that violates these Terms, applicable laws, or Gear policies, including fraud, harassment, misuse of the Platform, or attempts to bypass fees or protections.</li>
+</ul>
+
+<h2 id=”eligibility”>2. Eligibility</h2>
+<ul>
+  <li>You are at least 18 years old;</li>
+  <li>You are legally able to enter into contracts;</li>
+  <li>The information you provide is accurate and kept up to date.</li>
+</ul>
+
+<h2 id="role">3. Role of Gear</h2>
+<p>Gear provides a platform for users to list, buy, and sell car parts. Gear does not own, inspect, or guarantee any items listed on the App. Listings are created by independent third‑party sellers. Any contract of sale is between the buyer and the seller, not Gear.</p>
+
+<h2 id="fees">4. Fees</h2>
+<p>Gear charges a 10% marketplace fee on the total sale amount, including item price and shipping. This fee is automatically deducted at the time of sale and is non‑refundable.</p>
+
+<h2 id="payments">5. Payments</h2>
+<p>Payments are processed by Stripe. By using Gear, you also agree to Stripe’s terms and policies. Gear does not store complete credit card numbers. We receive tokens and limited payment data from Stripe to facilitate orders and payouts.</p>
+
+<h2 id="payouts">6. Seller Payouts</h2>
+
+<h3>6.1 Payout Setup Requirement</h3>
+<p>To receive payouts for sales, sellers must complete payout setup through Stripe Connect. If you receive a sale before completing payout setup, you will have <strong>72 hours</strong> to complete setup. If payout setup is not completed within this window, the order will be automatically cancelled and the buyer will be refunded.</p>
+
+<h3>6.2 Marketplace Fee</h3>
+<p>Gear charges a 10% marketplace fee on the total sale amount (item price plus shipping). This fee is automatically deducted from your payout.</p>
+
+<h3>6.3 Payout Holds &amp; Release Schedule</h3>
+<p>To protect buyers and maintain marketplace integrity, seller payouts are held until fulfilment is confirmed. Payouts may also be subject to additional verification checks by Stripe or Gear before release.</p>
+<ul>
+  <li>Payouts are released when tracking confirms Delivery Confirmation.</li>
+  <li>If tracking does not show delivery within 14 days, the order will enter manual review.</li>
+  <li>Payouts will not be automatically released based solely on time.</li>
+  <li>Gear may release payouts where tracking shows active transit and there are no disputes, fraud indicators, or policy violations.</li>
+</ul>
+<p class="muted">Business days exclude weekends (Saturday and Sunday) and are calculated based on Australian Eastern Time.</p>
+
+<h3>6.4 Disputes and Refunds</h3>
+<p>If an order is disputed or refunded before the payout is released, the pending payout will be voided. If a payout has already been released, Gear reserves the right to recover the funds from the Seller's connected Stripe account or offset the amount against future payouts. Gear reserves the right to hold or delay payouts if there is suspected fraud, policy violations, or ongoing disputes.</p>
+
+<h3>6.5 Payout Processing</h3>
+<p>Once a payout is released, it will be transferred to your connected Stripe account. The time it takes to reach your bank account depends on your bank and Stripe’s processing times, which is typically 1–2 business days.</p>
+
+<h3 id="auctions">6.6 Auctions &amp; Bidding</h3>
+<p>Gear may support fixed‑price (“Buy Now”) listings, auction listings (bidding only), and hybrid listings (Buy Now + bidding). The availability of each option depends on the listing configuration chosen by the seller.</p>
+
+<ul>
+  <li><strong>Hybrid fairness:</strong> For hybrid listings, the Buy Now option is disabled once the first bid is placed.</li>
+  <li><strong>Listing lock:</strong> Once a bid has been placed on an auction or hybrid listing, most listing details are locked to protect bidders. Sellers may still add to the description and add new photos, but cannot change core details (title, price, condition, etc.). Listings with active bids cannot be deleted.</li>
+  <li><strong>Anti‑sniping:</strong> If a valid bid is placed within the final 5 minutes of an auction, the auction end time may automatically extend by 5 minutes. Total extensions are capped at 60 minutes.</li>
+  <li><strong>Reserve price:</strong> Some auctions may have a reserve price. Gear may indicate whether a reserve has been met, but does not display the reserve amount.</li>
+</ul>
+
+<div class="note">
+  <strong>Auction payment window (48 hours):</strong>
+  <p>If you win an auction, you must complete payment within <strong>48 hours</strong> of the auction ending (or by the deadline shown in the App). If payment is not completed within this window, Gear may cancel the order, notify the seller, and the item may be relisted or made available to other buyers.</p>
+</div>
+
+<h3>6.7 Offers &amp; Payment</h3>
+<ul>
+  <li><strong>Offer expiry:</strong> Offers expire after 48 hours if the seller does not respond.</li>
+  <li><strong>Offers and bids:</strong> When a bid is placed on a listing, all pending offers on that listing are automatically cancelled and both buyers and sellers are notified.</li>
+</ul>
+
+<div class="note">
+  <strong>Accepted offer payment window (48 hours):</strong>
+  <p>Sellers may accept multiple offers on the same listing. The listing remains active until a buyer completes payment. The first buyer to complete payment secures the item, and any other accepted offers are automatically cancelled. You have <strong>48 hours</strong> from acceptance to complete payment. If payment is not completed within this window, Gear may cancel the accepted offer and notify the buyer.</p>
+</div>
+
+<p>Gear may take account action for repeated non‑payment or other misuse, including limiting bidding features, holding payouts, or suspending accounts.</p>
+
+<h3>6.8 Ending a Listing Early</h3>
+<p>Listings with active bids cannot be ended automatically by the seller. In limited circumstances, a seller may submit a request to end a listing early through the App. All such requests are subject to review and approval by Gear before any action is taken.</p>
+<p>Valid reasons for requesting early ending include:</p>
+<ul>
+  <li>The item is no longer available;</li>
+  <li>The item has been damaged;</li>
+  <li>There is a material error in the listing;</li>
+  <li>Suspected fraudulent bidding activity; or</li>
+  <li>Other circumstances as determined by Gear (e.g. legal or safety concerns).</li>
+</ul>
+<p>If a listing has active bids and less than 12 hours remaining, the seller cannot submit a request to end the listing through the normal request flow. In such cases, only Gear may intervene in exceptional circumstances (e.g. item lost, damaged, legal or safety issue, obvious listing error, or fraud).</p>
+<p>If a request is approved, Gear will end the listing, cancel all active bids, and notify all affected bidders. If a request is declined, the auction will remain live and the seller will be notified.</p>
+<p>Gear maintains a full audit log of all end-listing requests, approvals, rejections, and reasons. Repeated or excessive early-ending requests may result in account review or restrictions.</p>
+
+<h3>6.9 Listing Deletion</h3>
+<p>Sellers may delete their own listings, subject to the following restrictions:</p>
+<ul>
+  <li>A listing <strong>cannot be deleted</strong> if it has active bids. Sellers must use the "Request to End Listing" process described in Section 6.8 instead.</li>
+  <li>A listing <strong>cannot be deleted</strong> if it has any active or unresolved order (including orders with status: paid, processing, awaiting shipment, shipped, payout pending, or dispute open).</li>
+  <li>Deletion is only permitted when there are no active bids <strong>and</strong> all related orders are resolved (cancelled, refunded, completed, delivered, or expired).</li>
+</ul>
+<p>These restrictions apply to all listing types, including Buy Now, Auction, and Hybrid listings. Gear may archive deleted listings rather than permanently removing them, in order to maintain transaction records and comply with legal obligations.</p>
+
+<h2 id="shipping">7. Shipping, Buyer Protection &amp; Seller Protection</h2>
+<p>The full details of our shipping, buyer protection, and seller protection policies are set out in the <a href="shipping-and-protection.html">Shipping &amp; Protection</a> page, which is incorporated into and forms part of these Terms.</p>
+
+<h2 id="returns">8. Refunds and Returns</h2>
+<p>All sales on Gear are generally final. However, nothing in these Terms excludes, restricts, or modifies any rights you may have under the Australian Consumer Law or other applicable consumer protection laws.</p>
+<p>Gear provides Buyer Protection in limited circumstances, primarily in cases of verified fraud. Fraud may include a seller failing to ship an item, providing fake or invalid tracking, or sending an item that is completely different from the listing or clearly counterfeit.</p>
+<p>Outside of these circumstances, refunds or returns are not typically provided.</p>
+<p>Not covered under Gear's Buyer Protection:</p>
+<ul>
+  <li>Change of mind;</li>
+  <li>Fitment or compatibility issues;</li>
+  <li>Shipping delays or courier-related issues;</li>
+  <li>Condition disputes that are not materially misleading or fraudulent;</li>
+  <li>Damage caused in transit by the courier (where the seller has complied with shipping requirements).</li>
+</ul>
+<p>Nothing in this section limits a Buyer's rights under applicable consumer protection laws.</p>
+
+<h2 id="prohibited">9. Prohibited Listings</h2>
+<ul>
+  <li>Stolen parts or items you do not have the right to sell;</li>
+  <li>Airbags, pyrotechnic or explosive components, or other highly dangerous items;</li>
+  <li>Items requiring a licence to sell where you do not hold that licence;</li>
+  <li>Illegal modifications or items that are unlawful to sell in your jurisdiction;</li>
+  <li>Counterfeit or fake parts, including replicas sold as genuine OEM;</li>
+  <li>Items unrelated to automotive use.</li>
+</ul>
+
+<h2 id="conduct">10. User Conduct</h2>
+<ul>
+  <li>Scam, mislead, or defraud others;</li>
+  <li>Post false, misleading, or incomplete information;</li>
+  <li>Harass, abuse, or threaten other users;</li>
+  <li>Attempt to bypass Gear’s fee system or encourage payment outside the App;</li>
+  <li>Use Gear for any unlawful purpose.</li>
+</ul>
+
+<h2 id=”offplatform”>11. Off-Platform Transactions (Strictly Prohibited)</h2>
+<p>All transactions on Gear must be completed entirely within the Platform using Gear’s In-App Payment System.</p>
+<p>Users must not engage in, attempt, or facilitate any Off-Platform Transaction.</p>
+<p>Prohibited conduct includes, but is not limited to:</p>
+<ul>
+  <li>Sharing or requesting personal contact information (including phone numbers, email addresses, or social media handles) for the purpose of arranging transactions outside the Platform;</li>
+  <li>Directing or encouraging another user to complete a transaction outside the Platform, including via external payment methods, websites, or messaging services;</li>
+  <li>Attempting to bypass or avoid Gear’s Marketplace Fee;</li>
+  <li>Listing items or communicating in a way intended to move transactions off-platform.</li>
+</ul>
+<p>Any Off-Platform Transaction is conducted at the users’ own risk and is not covered by Buyer Protection or Seller Protection.</p>
+<p>Gear may take enforcement action for violations of this policy, including:</p>
+<ul>
+  <li>Removing listings;</li>
+  <li>Restricting or disabling account features;</li>
+  <li>Holding or reversing payouts;</li>
+  <li>Suspending or permanently banning accounts.</li>
+</ul>
+<p>Gear may monitor messages, listings, and activity for the purpose of detecting Off-Platform Transactions, fee circumvention, and fraud prevention, in accordance with our Privacy Policy.</p>
+
+<h2 id=”seller”>12. Seller Responsibilities</h2>
+<ul>
+  <li>Accurately describe items, including condition and known defects;</li>
+  <li>Use your own photos or properly licensed images, clearly showing the actual item;</li>
+  <li>Ship items promptly and provide valid tracking;</li>
+  <li>Comply with applicable consumer and product safety laws.</li>
+</ul>
+
+<h2 id=”buyer”>13. Buyer Responsibilities</h2>
+<ul>
+  <li>Review listings carefully before purchasing;</li>
+  <li>Check compatibility and fitment for your vehicle;</li>
+  <li>Communicate respectfully with sellers;</li>
+  <li>Report suspected fraud or policy violations to Gear.</li>
+</ul>
+
+<h2 id=”liability”>14. Liability</h2>
+<p>Gear is provided on an “as is” and “as available” basis. To the maximum extent permitted by law, Gear disclaims all warranties, express or implied. Gear is not liable for any indirect, incidental, or consequential losses, including but not limited to loss arising from buyer/seller conduct or shipping issues. Gear is not responsible for outages, delays, or errors caused by third-party services such as Stripe or shipping carriers, to the maximum extent permitted by law.</p>
+<p>Payment methods: Stripe checkout may offer supported digital wallets (such as Apple Pay or Google Pay) when available on your device.</p>
+
+<h2 id=”suspension”>15. Account Suspension</h2>
+<p>We may suspend or terminate any account, or remove listings, at our reasonable discretion if we believe a user has violated these Terms, engaged in fraud, or created risk for other users.</p>
+
+<h2 id=”deletion”>16. Account Deletion Restrictions During Investigations</h2>
+<p>Users may not delete their Gear account while an investigation is active. Gear may temporarily block account deletion if:</p>
+<ul>
+  <li>A fraud or scam investigation is in progress;</li>
+  <li>A buyer protection claim is open;</li>
+  <li>A chargeback or payment dispute is pending;</li>
+  <li>There are outstanding shipments or unresolved order issues;</li>
+  <li>The user has unpaid fees or a negative balance;</li>
+  <li>Gear’s automated systems or payment partners have flagged the account for suspicious activity.</li>
+</ul>
+<p>Gear may preserve account and transaction data as needed to comply with financial regulations, fraud prevention requirements, payment partner rules, and law enforcement requests. Accounts may only become eligible for deletion once all investigations, disputes, and compliance checks are fully resolved.</p>
+
+<h2 id=”changes”>17. Changes to These Terms</h2>
+<p>We may update these Terms from time to time. If we make material changes, we may notify you via the App or by email. Your continued use of Gear after changes take effect constitutes acceptance of the revised Terms.</p>
+
+<h2 id=”contact”>18. Contact</h2>
+<p>For questions about these Terms, you can contact us at: <a href=”mailto:support@gearapp.com.au”>support@gearapp.com.au</a></p>
+
     </div>
-  </nav>
-
-  <!-- Content -->
-  <div class="content">
-    <h1>Terms of Service</h1>
-    <p class="updated">Last updated: 8 February 2026</p>
-
-    <h2>1. Introduction</h2>
-    <p>Welcome to <strong>Gear</strong> (the "App"), a marketplace that allows users to buy and sell car parts. By creating an account or using Gear, you agree to these Terms of Service ("Terms"). If you do not agree, do not use the App.</p>
-
-    <h2>2. Eligibility</h2>
-    <ul>
-      <li>You are at least 18 years old;</li>
-      <li>You are legally able to enter into contracts;</li>
-      <li>The information you provide is accurate and kept up to date.</li>
-    </ul>
-
-    <h2>3. Role of Gear</h2>
-    <p>Gear provides a platform for users to list, buy, and sell car parts. Gear does not own, inspect, or guarantee any items listed on the App. Listings are created by independent third-party sellers. Any contract of sale is between the buyer and the seller, not Gear.</p>
-
-    <h2>4. Fees</h2>
-    <p>Gear charges a <strong>10% marketplace fee</strong> on the <strong>total sale amount</strong>, including item price and shipping. This fee is automatically deducted at the time of sale and is non-refundable.</p>
-
-    <h2>5. Payments</h2>
-    <p>Payments are processed by <strong>Stripe</strong>. By using Gear, you also agree to Stripe's terms and policies. Gear does not store complete credit card numbers. We receive tokens and limited payment data from Stripe to facilitate orders and payouts.</p>
-
-    <h2>6. Seller Payouts</h2>
-    <h3>6.1 Payout Setup Requirement</h3>
-    <p>To receive payouts for sales, sellers must complete payout setup through Stripe Connect. If you receive a sale before completing payout setup, you will have <strong>72 hours</strong> to complete setup. If payout setup is not completed within this window, the order will be automatically cancelled and the buyer will be refunded.</p>
-
-    <h3>6.2 Marketplace Fee</h3>
-    <p>Gear charges a <strong>10% marketplace fee</strong> on the total sale amount (item price plus shipping). This fee is automatically deducted from your payout. For example, if you sell an item for $100 with $10 shipping, your payout will be $99 (90% of $110).</p>
-
-    <h3>6.3 Payout Holds &amp; Release Schedule</h3>
-    <p>To protect buyers and maintain marketplace integrity, seller payouts are held until fulfilment is confirmed. Payouts may also be subject to additional verification checks by Stripe or Gear before release.</p>
-    <ul>
-      <li><strong>Tracked shipments:</strong> Payout is released <strong>3 business days</strong> after the tracking shows delivered. If tracking does not show delivered within 14 days, the payout will be released automatically.</li>
-      <li><strong>Untracked shipments:</strong> Payout is released <strong>10 business days</strong> after the seller marks the order as shipped.</li>
-    </ul>
-    <p>Business days exclude weekends (Saturday and Sunday) and are calculated based on Australian Eastern Time.</p>
-
-    <h3>6.4 Disputes and Refunds</h3>
-    <p>If an order is disputed or refunded before the payout is released, the pending payout will be voided. Gear reserves the right to hold or delay payouts if there is suspected fraud, policy violations, or ongoing disputes.</p>
-
-    <h3>6.5 Payout Processing</h3>
-    <p>Once a payout is released, it will be transferred to your connected Stripe account. The time it takes to reach your bank account depends on your bank and Stripe's processing times, which is typically 1&ndash;2 business days.</p>
-
-    <h3>6.6 Auctions &amp; Bidding</h3>
-    <p>Items may be listed as fixed-price, auction, or hybrid (allowing both bidding and Buy Now). Bidding rules:</p>
-    <ul>
-      <li><strong>Hybrid fairness:</strong> Once a bid is placed on a hybrid listing, the Buy Now option is disabled to protect bidders.</li>
-      <li><strong>Anti-sniping:</strong> If a bid is placed in the final 2 minutes, the auction automatically extends by 2 minutes.</li>
-      <li><strong>Reserve price:</strong> Sellers may set a hidden reserve. If the reserve is not met, the seller is not obligated to sell.</li>
-      <li><strong>Payment window:</strong> Auction winners must complete payment within <strong>48 hours</strong>. Failure to pay may result in a strike, account restrictions, or a ban.</li>
-    </ul>
-
-    <h3>6.7 Offers &amp; Accepted Offer Payments</h3>
-    <p>Buyers may submit offers on eligible listings. Sellers may accept, decline, or counter any offer.</p>
-    <ul>
-      <li><strong>Multiple acceptances:</strong> Sellers may accept multiple offers on the same listing. The listing remains active until a buyer completes payment.</li>
-      <li><strong>First to pay wins:</strong> The first buyer to complete payment secures the item. All other accepted offers are automatically cancelled.</li>
-      <li><strong>Payment window:</strong> Accepted offer buyers must complete payment within <strong>48 hours</strong> of acceptance. If payment is not completed within this window, the accepted offer will be cancelled.</li>
-    </ul>
-
-    <h2>7. Shipping, Buyer Protection &amp; Seller Protection</h2>
-    <p>The full details of our shipping, buyer protection, and seller protection policies are set out in the <a href="shipping-and-protection.html"><strong>Shipping &amp; Protection</strong></a> page, which is incorporated into and forms part of these Terms.</p>
-
-    <h2>8. Refunds and Returns</h2>
-    <p>All sales on Gear are final, except where required by applicable consumer protection laws. Gear does not offer returns or refunds except in cases of <strong>verified fraud</strong>. Fraud may include a seller never shipping an item, providing fake tracking, or sending a completely different or clearly counterfeit item.</p>
-    <p>Refunds are not available for:</p>
-    <ul>
-      <li>Change of mind;</li>
-      <li>Fitment or compatibility issues;</li>
-      <li>Shipping delays or courier issues;</li>
-      <li>Condition disputes that are not fraudulent;</li>
-      <li>Damage caused in transit by the courier.</li>
-    </ul>
-
-    <h2>9. Prohibited Listings</h2>
-    <ul>
-      <li>Stolen parts or items you do not have the right to sell;</li>
-      <li>Airbags, pyrotechnic or explosive components, or other highly dangerous items;</li>
-      <li>Items requiring a licence to sell where you do not hold that licence;</li>
-      <li>Illegal modifications or items that are unlawful to sell in your jurisdiction;</li>
-      <li>Counterfeit or fake parts, including replicas sold as genuine OEM;</li>
-      <li>Items unrelated to automotive use.</li>
-    </ul>
-
-    <h2>10. User Conduct</h2>
-    <ul>
-      <li>Scam, mislead, or defraud others;</li>
-      <li>Post false, misleading, or incomplete information;</li>
-      <li>Harass, abuse, or threaten other users;</li>
-      <li>Attempt to bypass Gear's fee system or encourage payment outside the App;</li>
-      <li>Use Gear for any unlawful purpose.</li>
-    </ul>
-
-    <h2>11. Off-Platform Transactions (Strictly Prohibited)</h2>
-    <p>All transactions must be completed within the Gear App. Off-platform payments, sharing contact info to avoid fees, or directing users elsewhere is strictly prohibited and may result in suspension or a permanent ban. Gear monitors messages for policy violations.</p>
-
-    <h2>12. Seller Responsibilities</h2>
-    <ul>
-      <li>Accurately describe items, including condition and known defects;</li>
-      <li>Use your own photos or properly licensed images, clearly showing the actual item;</li>
-      <li>Ship items promptly and provide valid tracking;</li>
-      <li>Comply with applicable consumer and product safety laws.</li>
-    </ul>
-
-    <h2>13. Buyer Responsibilities</h2>
-    <ul>
-      <li>Review listings carefully before purchasing;</li>
-      <li>Check compatibility and fitment for your vehicle;</li>
-      <li>Communicate respectfully with sellers;</li>
-      <li>Report suspected fraud or policy violations to Gear.</li>
-    </ul>
-
-    <h2>14. Liability</h2>
-    <p>Gear is provided on an "as is" and "as available" basis. To the maximum extent permitted by law, Gear disclaims all warranties, express or implied. Gear is not liable for any indirect, incidental, or consequential losses, including but not limited to loss arising from buyer/seller conduct or shipping issues. Gear is not responsible for outages, delays, or errors caused by third-party services such as Stripe or shipping carriers, to the maximum extent permitted by law.</p>
-    <p><strong>Payment methods:</strong> Stripe checkout may offer supported digital wallets (such as Apple Pay or Google Pay) when available on your device.</p>
-
-    <h2>15. Account Suspension</h2>
-    <p>We may suspend or terminate any account, or remove listings, at our reasonable discretion if we believe a user has violated these Terms, engaged in fraud, or created risk for other users.</p>
-
-    <h2>16. Account Deletion Restrictions During Investigations</h2>
-    <p>Users may not delete their Gear account while an investigation is active. Gear may temporarily block account deletion if:</p>
-    <ul>
-      <li>A fraud or scam investigation is in progress;</li>
-      <li>A buyer protection claim is open;</li>
-      <li>A chargeback or payment dispute is pending;</li>
-      <li>There are outstanding shipments or unresolved order issues;</li>
-      <li>The user has unpaid fees or a negative balance;</li>
-      <li>Gear's automated systems or payment partners have flagged the account for suspicious activity.</li>
-    </ul>
-    <p>Gear may preserve account and transaction data as needed to comply with financial regulations, fraud prevention requirements, payment partner rules, and law enforcement requests.</p>
-
-    <h2>17. Changes to These Terms</h2>
-    <p>We may update these Terms from time to time. If we make material changes, we may notify you via the App or by email. Your continued use of Gear after changes take effect constitutes acceptance of the revised Terms.</p>
-
-    <h2>18. Contact</h2>
-    <p>For questions about these Terms, contact us at <strong>support@gearapp.com.au</strong>.</p>
   </div>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <a href="index.html" class="logo">
-        <img src="gear-logo-white.png" alt="GEAR" class="footer-logo-svg">
-      </a>
-      <div class="footer-links">
-        <a href="terms-of-service.html">Terms of Service</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="shipping-and-protection.html">Shipping &amp; Protection</a>
-        <a href="contact.html">Contact</a>
-        <a href="support.html">Support</a>
-      </div>
-      <p class="footer-copy">&copy; 2026 GEAR&trade;. All rights reserved.</p>
-    </div>
-  </footer>
 </body>
 </html>

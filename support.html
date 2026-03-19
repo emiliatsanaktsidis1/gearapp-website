@@ -303,20 +303,6 @@
       color: #666;
     }
 
-    @media (max-width: 968px) {
-      .nav-links {
-        display: none;
-      }
-
-      .logo-svg {
-        height: 180px;
-      }
-
-      .footer-logo-svg {
-        height: 160px;
-      }
-    }
-
     @media (max-width: 768px) {
       .content {
         padding: 100px 16px 60px;
@@ -330,132 +316,13 @@
       .category-title {
         font-size: 18px;
       }
-    }
-
-    @media (max-width: 600px) {
-      body {
-        overflow-x: hidden;
+      .nav-links {
+        display: none;
       }
-
-      nav {
-        height: 90px;
-      }
-
-      .nav-content {
-        padding: 0 16px;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-      }
-
-      .nav-content .logo {
-        position: relative;
-        top: 20px;
-        left: auto;
-        transform: none;
-        display: flex;
-        align-items: center;
-        height: 100%;
-      }
-
-      .logo-svg {
-        height: 200px;
-      }
-
-      .nav-cta {
-        padding: 14px 24px;
-        font-size: 16px;
-        border-radius: 10px;
-      }
-
-      .content {
-        padding: 120px 16px 40px;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-      }
-
-      h1 {
-        font-size: 32px;
-      }
-
-      .intro {
-        font-size: 16px;
-        margin-bottom: 32px;
-      }
-
-      .category-header {
-        padding: 12px 16px;
-      }
-
-      .category-icon {
-        width: 40px;
-        height: 40px;
-      }
-
-      .category-title {
-        font-size: 16px;
-      }
-
-      .faq-question {
-        padding: 14px 16px;
-      }
-
-      .faq-question h3 {
-        font-size: 14px;
-      }
-
-      .faq-answer {
-        padding: 0 16px 14px;
-        font-size: 14px;
-      }
-
-      .support-cta h3 {
-        font-size: 20px;
-      }
-
-      .support-cta p {
-        font-size: 14px;
-      }
-
-      footer {
-        padding: 10px 0 40px;
-      }
-
-      footer::after {
-        height: 8px;
-      }
-
       .footer-content {
         flex-direction: column;
-        gap: 20px;
+        gap: 24px;
         text-align: center;
-        padding-top: 20px;
-      }
-
-      .footer-content .logo {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        transform: none;
-        order: -1;
-      }
-
-      .footer-logo-svg {
-        height: 100px;
-      }
-
-      .footer-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
-      }
-
-      .footer-links a {
-        font-size: 14px;
-      }
-
-      .footer-copy {
-        font-size: 12px;
       }
     }
   </style>
@@ -479,6 +346,90 @@
   <div class="content">
     <h1>Help & Support</h1>
     <p class="intro">Find answers to common questions or contact our support team.</p>
+
+    <!-- Auctions & Bidding -->
+    <div class="faq-category">
+      <div class="category-header">
+        <div class="category-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00bcd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <span class="category-title">Auctions & Bidding</span>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What listing types are there?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">GEAR has three listing types: Buy Now (fixed price), Auction (bid to win), and Hybrid (bid or buy immediately).</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>How do auctions work?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Place bids on items you want. The highest bidder when the auction ends wins. You'll be notified if you're outbid so you can bid again.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What is a reserve price?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Some auctions have a hidden minimum price set by the seller. If bidding doesn't reach the reserve, the item won't sell.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What happens if I win an auction?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">You have 48 hours to complete payment. If you don't pay in time, the order is cancelled.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What is anti-sniping?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">If a bid is placed in the last 5 minutes of an auction, the auction extends by 5 minutes. This can happen up to a maximum of 60 minutes total extension, giving all bidders a fair chance.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What's a Hybrid listing?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">You can either bid or buy now at a set price. However, once the first bid is placed, the Buy Now option is removed to protect bidders.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>How do I create an auction listing?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">When listing, choose "Auction" or "Both" (Hybrid). Set a starting bid, optional reserve price, and auction duration (1-7 days or custom).</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What if the auction winner doesn't pay?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">If the auction winner doesn't pay within 48 hours, the order is automatically cancelled. The seller can then choose to offer the item to the next highest bidder or relist it.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What's the minimum bid increment?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Bids must increase by at least $5 each time.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Can I edit or delete my auction listing after bids are placed?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Once a bid has been placed, most listing details are locked to protect bidders. You can still add to the description and add new photos, but you cannot change the title, price, condition, category, or other core details. Deleting a listing with bids is not allowed.</div>
+        </div>
+      </div>
+    </div>
 
     <!-- Buying Parts -->
     <div class="faq-category">
@@ -505,14 +456,21 @@
             <h3>How do offers work?</h3>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">Tap Make Offer, enter your price, and send. Sellers can accept, decline, or counter. Sellers may accept multiple offers — the listing stays active until a buyer completes payment. The first buyer to pay secures the item, and any other accepted offers are automatically cancelled. You have 48 hours from acceptance to complete payment.</div>
+          <div class="faq-answer">Tap Make Offer, enter your price, and send. Sellers can accept, decline, or counter. Offers expire after 48 hours if the seller doesn't respond. Sellers may accept multiple offers on the same listing. The first buyer to complete payment secures the item. If another buyer pays first, your accepted offer will be cancelled. You have 48 hours from acceptance to complete payment.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What happens to my offer if someone bids on the listing?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">If a bid is placed on an auction or hybrid listing, all pending offers are automatically cancelled. You'll receive a notification explaining that your offer was cancelled because a bid was placed. You can still bid on the item instead.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <h3>What happens after my offer is accepted?</h3>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">You'll receive a notification with a link to complete payment. You have 48 hours to pay. Since sellers can accept multiple offers, the first buyer to pay wins the item. If another buyer pays first, your accepted offer is automatically cancelled.</div>
+          <div class="faq-answer">Once a seller accepts your offer, you have 48 hours to complete payment. You'll receive a notification with a Pay Now button. Sellers may accept multiple offers, so the listing stays active until someone pays. The first buyer to complete payment secures the item. If another buyer pays first, your accepted offer will be automatically cancelled. If you don't pay within 48 hours, your accepted offer is cancelled.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
@@ -533,21 +491,28 @@
             <h3>How does shipping work?</h3>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">After purchase, sellers ship the item and provide tracking. Shipping costs are shown on each listing before you buy.</div>
+          <div class="faq-answer">After purchase, sellers ship the item using tracked shipping and provide a tracking number. All shipments must use a supported carrier (Australia Post, DHL, FedEx, UPS, StarTrack, TNT, Aramex, or Couriers Please). Untracked shipping is not permitted. Shipping costs are shown on each listing before you buy.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Is tracked shipping required?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Yes. All GEAR shipments must use tracked shipping via a supported carrier: Australia Post, DHL, FedEx, UPS, StarTrack, TNT, Aramex, or Couriers Please. Untracked shipping is not permitted. Delivery is confirmed automatically when tracking shows "Delivered".</div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <h3>What if my item doesn't arrive?</h3>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">Report it in-app as soon as possible. We review tracking, messages, and listing details to determine next steps.</div>
+          <div class="faq-answer">Report it in-app as soon as possible. Since all orders require tracked shipping, we can verify the shipment status with the carrier. If tracking shows no movement for 14 days, the order may enter manual review. If delivery cannot be confirmed after 21 days, you may be refunded.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <h3>What if tracking says "delivered" but I didn't get it?</h3>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">Orders are usually considered delivered when tracking shows delivery or a delivery attempt. Check around your property and contact the courier, then report it in-app if needed.</div>
+          <div class="faq-answer">An order is considered delivered when tracking shows a final delivery status such as "Delivered", "Left in safe place", or "Signed for". A status of "Delivery attempted" does not count as delivered.<br><br>If your item is marked as delivered but you have not received it, check around your property (including neighbours, parcel lockers, and safe drop locations) and contact the courier. Please allow up to 48 hours, as some deliveries may be scanned prematurely.<br><br>If the issue is not resolved after 48 hours, report it through the Platform or contact us at support@gearapp.com.au.<br><br>Gear will review tracking information and relevant details to determine the appropriate outcome.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
@@ -583,14 +548,21 @@
             <h3>Can I edit a listing?</h3>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">Yes. Go to Profile → My Listings, select the item, and tap Edit.</div>
+          <div class="faq-answer">Yes. Go to Profile → My Listings, select the item, and tap Edit. Note: Auction listings with bids have limited editing — you can add to the description and add new photos, but other fields are locked.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <h3>When do I have to ship?</h3>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">You must ship within 5 business days of payment, unless you clearly state a longer handling time in your listing.</div>
+          <div class="faq-answer">You must ship within 5 business days of payment.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>Do I have to use tracked shipping?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Yes. All GEAR shipments must use tracked shipping via a supported carrier: Australia Post, DHL, FedEx, UPS, StarTrack, TNT, Aramex, or Couriers Please. Untracked shipping is not permitted. You must provide a valid tracking number before marking an order as shipped.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
@@ -601,10 +573,17 @@
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
-            <h3>What proof do I need if there's a dispute?</h3>
+            <h3>What protection do I have as a seller?</h3>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">Valid tracking is your main protection. Photos of the packaged item before shipping are also recommended.</div>
+          <div class="faq-answer">Sellers are protected when they comply with Gear's shipping requirements: using a Supported Carrier, providing Valid Tracking, and Valid Tracking showing Delivery Confirmation. Payouts will generally be released once Valid Tracking shows Delivery Confirmation. Disputes claiming non-delivery will generally be resolved in the Seller's favour where Delivery Confirmation is shown, subject to Gear's review.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>When do I get paid?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Payouts are released when tracking confirms delivery. If tracking does not show delivery within 14 days, the order will enter manual review. Payouts will not be automatically released based solely on time. Once released, it typically takes 1–2 business days to reach your bank account.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
@@ -625,7 +604,7 @@
             <h3>What are GEAR's fees?</h3>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">GEAR takes a 10% marketplace fee on the total sale amount. This fee is automatically deducted when the buyer pays.</div>
+          <div class="faq-answer">GEAR takes a 10% marketplace fee on the total sale amount (item price + shipping). This fee is automatically deducted from the seller's payout — buyers are not charged any additional fees.</div>
         </div>
       </div>
     </div>
@@ -645,24 +624,38 @@
       <div class="faq-list">
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>How do I report a problem with my order?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Go to My Purchases, find the order, and tap "Report Problem". Select the issue type and provide details. You'll receive updates on the resolution in the app.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
             <h3>What counts as "delivered"?</h3>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">An order is usually considered delivered when valid tracking shows delivery or a delivery attempt at the address or delivery area.</div>
+          <div class="faq-answer">An order is considered delivered when valid tracking shows a final delivery status such as "Delivered", "Left in safe place", or "Signed for". "Delivery attempted" does not count as delivered.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <h3>What happens if a seller doesn't ship?</h3>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">If there's no valid proof of shipment, the order may be treated as non-shipment and the buyer may be refunded.</div>
+          <div class="faq-answer">All orders require tracked shipping with a supported carrier. If the seller doesn't provide a valid tracking number, the order may be treated as non-shipment and the buyer will be refunded. If tracking shows no movement for 14 days, the order enters manual review.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <h3>Are courier delays refundable?</h3>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">No. Delays or in-transit issues are courier matters unless fraud is involved.</div>
+          <div class="faq-answer">No. Delays or in-transit issues are courier matters unless fraud is involved. Contact the courier directly using your tracking details.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What does Buyer Protection NOT cover?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Buyer Protection does not cover: fitment or compatibility issues, change of mind, minor condition disputes where the listing was generally accurate, courier delays, or non-receipt claims where tracking confirms delivery (unless fraud is proven).</div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
@@ -670,6 +663,13 @@
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">GEAR reviews tracking, messages, listings, and account history. Final decisions are made by GEAR.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3>What happens if I file too many disputes?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Filing false or excessive claims may result in account restrictions or suspension. GEAR tracks dispute patterns and may flag accounts with repeated claims.</div>
         </div>
       </div>
     </div>
@@ -753,9 +753,8 @@
         <img src="gear-logo-white.png" alt="GEAR" class="footer-logo-svg">
       </a>
       <div class="footer-links">
-        <a href="terms-of-service.html">Terms of Service</a>
         <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="shipping-and-protection.html">Shipping &amp; Protection</a>
+        <a href="terms-of-service.html">Terms of Service</a>
         <a href="contact.html">Contact</a>
         <a href="support.html">Support</a>
       </div>

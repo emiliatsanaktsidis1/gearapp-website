@@ -355,9 +355,39 @@
   <!-- Content -->
   <div class="content">
     <h1>Terms of Service</h1>
-    <p class="updated">Last updated: 8 February 2026</p>
+    <p class="updated">Last updated: 19 March 2026</p>
 
-    <h2>1. Introduction</h2>
+    <h2>1. Definitions</h2>
+    <ul>
+      <li><strong>"Platform"</strong> means the GEAR mobile application, website, and all related services and features.</li>
+      <li><strong>"App"</strong> means the GEAR mobile application.</li>
+      <li><strong>"Services"</strong> means all services provided by Gear through the Platform.</li>
+      <li><strong>"Buyer"</strong> means a user who purchases or bids on an item listed on the Platform.</li>
+      <li><strong>"Seller"</strong> means a user who lists an item for sale on the Platform.</li>
+      <li><strong>"Listing"</strong> means an item posted for sale on the Platform, including Buy Now, Auction, and Hybrid listings.</li>
+      <li><strong>"Order"</strong> means a completed and paid transaction between a Buyer and a Seller through the Platform.</li>
+      <li><strong>"Order Address"</strong> means the delivery address provided by the Buyer at checkout for an Order.</li>
+      <li><strong>"Payout"</strong> means the transfer of sale proceeds to a Seller's connected Stripe account, after deduction of the Marketplace Fee.</li>
+      <li><strong>"Marketplace Fee"</strong> means the 10% fee charged by Gear on the total sale amount (item price plus shipping).</li>
+      <li><strong>"Buyer Protection"</strong> means the protections provided to Buyers as set out in the Shipping &amp; Protection policy, which is incorporated into these Terms.</li>
+      <li><strong>"Seller Protection"</strong> means the protections provided to Sellers as set out in the Shipping &amp; Protection policy, which is incorporated into these Terms.</li>
+      <li><strong>"Supported Carrier"</strong> means Australia Post, DHL, FedEx, UPS, StarTrack, TNT, Aramex, or Couriers Please.</li>
+      <li><strong>"Tracked Shipping"</strong> means a shipment sent via a Supported Carrier with Valid Tracking.</li>
+      <li><strong>"Valid Tracking"</strong> means a tracking number issued by a Supported Carrier that shows verifiable shipment progress and delivery status.</li>
+      <li><strong>"Delivery Confirmation"</strong> means a tracking status provided by a Supported Carrier indicating that an item has been delivered to the Order Address or delivery area.</li>
+      <li><strong>"Stripe"</strong> means the third-party payment processing platform used by Gear to facilitate payments and payouts.</li>
+      <li><strong>"Stripe Connect"</strong> means the Stripe service that enables Sellers to receive payouts from sales on the Platform.</li>
+      <li><strong>"In-App Payment System"</strong> means the payment system provided through the Platform using Stripe or other approved payment providers.</li>
+      <li><strong>"Auction"</strong> means a Listing where Buyers place bids and the highest valid bidder at the end of the auction period wins the item.</li>
+      <li><strong>"Hybrid Listing"</strong> means a Listing that offers both a Buy Now price and the ability for Buyers to place bids.</li>
+      <li><strong>"Buy Now"</strong> means a fixed-price Listing where a Buyer can purchase the item immediately at the listed price.</li>
+      <li><strong>"Reserve Price"</strong> means a hidden minimum price set by the Seller on an Auction. If bidding does not reach the Reserve Price, the item will not be sold.</li>
+      <li><strong>"Anti-Sniping"</strong> means a feature where the Platform may automatically extend an Auction's end time when a bid is placed within the final minutes, to promote fair bidding.</li>
+      <li><strong>"Off-Platform Transaction"</strong> means any payment, trade, or transaction conducted outside the Platform and its In-App Payment System.</li>
+      <li><strong>"Fraud"</strong> means any activity that Gear reasonably determines to be deceptive, dishonest, or intended to mislead or exploit another user or the Platform, including but not limited to fake listings, false tracking, non-shipment, counterfeit items, or payment abuse.</li>
+      <li><strong>"Prohibited Conduct"</strong> means any behaviour that violates these Terms, applicable laws, or Gear policies, including fraud, harassment, misuse of the Platform, or attempts to bypass fees or protections.</li>
+    </ul>
+
     <p>Welcome to <strong>Gear</strong> (the "App"), a marketplace that allows users to buy and sell car parts. By creating an account or using Gear, you agree to these Terms of Service ("Terms"). If you do not agree, do not use the App.</p>
 
     <h2>2. Eligibility</h2>
@@ -381,52 +411,81 @@
     <p>To receive payouts for sales, sellers must complete payout setup through Stripe Connect. If you receive a sale before completing payout setup, you will have <strong>72 hours</strong> to complete setup. If payout setup is not completed within this window, the order will be automatically cancelled and the buyer will be refunded.</p>
 
     <h3>6.2 Marketplace Fee</h3>
-    <p>Gear charges a <strong>10% marketplace fee</strong> on the total sale amount (item price plus shipping). This fee is automatically deducted from your payout. For example, if you sell an item for $100 with $10 shipping, your payout will be $99 (90% of $110).</p>
+    <p>Gear charges a <strong>10% marketplace fee</strong> on the total sale amount (item price plus shipping). This fee is automatically deducted from your payout.</p>
 
     <h3>6.3 Payout Holds &amp; Release Schedule</h3>
     <p>To protect buyers and maintain marketplace integrity, seller payouts are held until fulfilment is confirmed. Payouts may also be subject to additional verification checks by Stripe or Gear before release.</p>
     <ul>
-      <li><strong>Tracked shipments:</strong> Payout is released <strong>3 business days</strong> after the tracking shows delivered. If tracking does not show delivered within 14 days, the payout will be released automatically.</li>
-      <li><strong>Untracked shipments:</strong> Payout is released <strong>10 business days</strong> after the seller marks the order as shipped.</li>
+      <li>Payouts are released when tracking confirms Delivery Confirmation.</li>
+      <li>If tracking does not show delivery within 14 days, the order will enter manual review.</li>
+      <li>Payouts will not be automatically released based solely on time.</li>
+      <li>Gear may release payouts where tracking shows active transit and there are no disputes, fraud indicators, or policy violations.</li>
     </ul>
     <p>Business days exclude weekends (Saturday and Sunday) and are calculated based on Australian Eastern Time.</p>
 
     <h3>6.4 Disputes and Refunds</h3>
-    <p>If an order is disputed or refunded before the payout is released, the pending payout will be voided. Gear reserves the right to hold or delay payouts if there is suspected fraud, policy violations, or ongoing disputes.</p>
+    <p>If an order is disputed or refunded before the payout is released, the pending payout will be voided. If a payout has already been released, Gear reserves the right to recover the funds from the Seller's connected Stripe account or offset the amount against future payouts. Gear reserves the right to hold or delay payouts if there is suspected fraud, policy violations, or ongoing disputes.</p>
 
     <h3>6.5 Payout Processing</h3>
     <p>Once a payout is released, it will be transferred to your connected Stripe account. The time it takes to reach your bank account depends on your bank and Stripe's processing times, which is typically 1&ndash;2 business days.</p>
 
     <h3>6.6 Auctions &amp; Bidding</h3>
-    <p>Items may be listed as fixed-price, auction, or hybrid (allowing both bidding and Buy Now). Bidding rules:</p>
+    <p>Gear may support fixed-price ("Buy Now") listings, auction listings (bidding only), and hybrid listings (Buy Now + bidding). The availability of each option depends on the listing configuration chosen by the seller.</p>
     <ul>
-      <li><strong>Hybrid fairness:</strong> Once a bid is placed on a hybrid listing, the Buy Now option is disabled to protect bidders.</li>
-      <li><strong>Anti-sniping:</strong> If a bid is placed in the final 2 minutes, the auction automatically extends by 2 minutes.</li>
-      <li><strong>Reserve price:</strong> Sellers may set a hidden reserve. If the reserve is not met, the seller is not obligated to sell.</li>
-      <li><strong>Payment window:</strong> Auction winners must complete payment within <strong>48 hours</strong>. Failure to pay may result in a strike, account restrictions, or a ban.</li>
+      <li><strong>Hybrid fairness:</strong> For hybrid listings, the Buy Now option is disabled once the first bid is placed.</li>
+      <li><strong>Listing lock:</strong> Once a bid has been placed on an auction or hybrid listing, most listing details are locked to protect bidders. Sellers may still add to the description and add new photos, but cannot change core details (title, price, condition, etc.). Listings with active bids cannot be deleted.</li>
+      <li><strong>Anti-sniping:</strong> If a valid bid is placed within the final 5 minutes of an auction, the auction end time may automatically extend by 5 minutes. Total extensions are capped at 60 minutes.</li>
+      <li><strong>Reserve price:</strong> Some auctions may have a reserve price. Gear may indicate whether a reserve has been met, but does not display the reserve amount.</li>
     </ul>
+    <p><strong>Auction payment window (48 hours):</strong> If you win an auction, you must complete payment within <strong>48 hours</strong> of the auction ending (or by the deadline shown in the App). If payment is not completed within this window, Gear may cancel the order, notify the seller, and the item may be relisted or made available to other buyers.</p>
 
-    <h3>6.7 Offers &amp; Accepted Offer Payments</h3>
-    <p>Buyers may submit offers on eligible listings. Sellers may accept, decline, or counter any offer.</p>
+    <h3>6.7 Offers &amp; Payment</h3>
     <ul>
-      <li><strong>Multiple acceptances:</strong> Sellers may accept multiple offers on the same listing. The listing remains active until a buyer completes payment.</li>
-      <li><strong>First to pay wins:</strong> The first buyer to complete payment secures the item. All other accepted offers are automatically cancelled.</li>
-      <li><strong>Payment window:</strong> Accepted offer buyers must complete payment within <strong>48 hours</strong> of acceptance. If payment is not completed within this window, the accepted offer will be cancelled.</li>
+      <li><strong>Offer expiry:</strong> Offers expire after 48 hours if the seller does not respond.</li>
+      <li><strong>Offers and bids:</strong> When a bid is placed on a listing, all pending offers on that listing are automatically cancelled and both buyers and sellers are notified.</li>
     </ul>
+    <p><strong>Accepted offer payment window (48 hours):</strong> Sellers may accept multiple offers on the same listing. The listing remains active until a buyer completes payment. The first buyer to complete payment secures the item, and any other accepted offers are automatically cancelled. You have <strong>48 hours</strong> from acceptance to complete payment. If payment is not completed within this window, Gear may cancel the accepted offer and notify the buyer.</p>
+    <p>Gear may take account action for repeated non-payment or other misuse, including limiting bidding features, holding payouts, or suspending accounts.</p>
+
+    <h3>6.8 Ending a Listing Early</h3>
+    <p>Listings with active bids cannot be ended automatically by the seller. In limited circumstances, a seller may submit a request to end a listing early through the App. All such requests are subject to review and approval by Gear before any action is taken.</p>
+    <p>Valid reasons for requesting early ending include:</p>
+    <ul>
+      <li>The item is no longer available;</li>
+      <li>The item has been damaged;</li>
+      <li>There is a material error in the listing;</li>
+      <li>Suspected fraudulent bidding activity; or</li>
+      <li>Other circumstances as determined by Gear (e.g. legal or safety concerns).</li>
+    </ul>
+    <p>If a listing has active bids and less than 12 hours remaining, the seller cannot submit a request to end the listing through the normal request flow. In such cases, only Gear may intervene in exceptional circumstances (e.g. item lost, damaged, legal or safety issue, obvious listing error, or fraud).</p>
+    <p>If a request is approved, Gear will end the listing, cancel all active bids, and notify all affected bidders. If a request is declined, the auction will remain live and the seller will be notified.</p>
+    <p>Gear maintains a full audit log of all end-listing requests, approvals, rejections, and reasons. Repeated or excessive early-ending requests may result in account review or restrictions.</p>
+
+    <h3>6.9 Listing Deletion</h3>
+    <p>Sellers may delete their own listings, subject to the following restrictions:</p>
+    <ul>
+      <li>A listing <strong>cannot be deleted</strong> if it has active bids. Sellers must use the "Request to End Listing" process described in Section 6.8 instead.</li>
+      <li>A listing <strong>cannot be deleted</strong> if it has any active or unresolved order (including orders with status: paid, processing, awaiting shipment, shipped, payout pending, or dispute open).</li>
+      <li>Deletion is only permitted when there are no active bids <strong>and</strong> all related orders are resolved (cancelled, refunded, completed, delivered, or expired).</li>
+    </ul>
+    <p>These restrictions apply to all listing types, including Buy Now, Auction, and Hybrid listings. Gear may archive deleted listings rather than permanently removing them, in order to maintain transaction records and comply with legal obligations.</p>
 
     <h2>7. Shipping, Buyer Protection &amp; Seller Protection</h2>
     <p>The full details of our shipping, buyer protection, and seller protection policies are set out in the <a href="shipping-and-protection.html"><strong>Shipping &amp; Protection</strong></a> page, which is incorporated into and forms part of these Terms.</p>
 
     <h2>8. Refunds and Returns</h2>
-    <p>All sales on Gear are final, except where required by applicable consumer protection laws. Gear does not offer returns or refunds except in cases of <strong>verified fraud</strong>. Fraud may include a seller never shipping an item, providing fake tracking, or sending a completely different or clearly counterfeit item.</p>
-    <p>Refunds are not available for:</p>
+    <p>All sales on Gear are generally final. However, nothing in these Terms excludes, restricts, or modifies any rights you may have under the Australian Consumer Law or other applicable consumer protection laws.</p>
+    <p>Gear provides Buyer Protection in limited circumstances, primarily in cases of verified fraud. Fraud may include a seller failing to ship an item, providing fake or invalid tracking, or sending an item that is completely different from the listing or clearly counterfeit.</p>
+    <p>Outside of these circumstances, refunds or returns are not typically provided.</p>
+    <p>Not covered under Gear's Buyer Protection:</p>
     <ul>
       <li>Change of mind;</li>
       <li>Fitment or compatibility issues;</li>
-      <li>Shipping delays or courier issues;</li>
-      <li>Condition disputes that are not fraudulent;</li>
-      <li>Damage caused in transit by the courier.</li>
+      <li>Shipping delays or courier-related issues;</li>
+      <li>Condition disputes that are not materially misleading or fraudulent;</li>
+      <li>Damage caused in transit by the courier (where the seller has complied with shipping requirements).</li>
     </ul>
+    <p>Nothing in this section limits a Buyer's rights under applicable consumer protection laws.</p>
 
     <h2>9. Prohibited Listings</h2>
     <ul>
@@ -448,7 +507,24 @@
     </ul>
 
     <h2>11. Off-Platform Transactions (Strictly Prohibited)</h2>
-    <p>All transactions must be completed within the Gear App. Off-platform payments, sharing contact info to avoid fees, or directing users elsewhere is strictly prohibited and may result in suspension or a permanent ban. Gear monitors messages for policy violations.</p>
+    <p>All transactions on Gear must be completed entirely within the Platform using Gear's In-App Payment System.</p>
+    <p>Users must not engage in, attempt, or facilitate any Off-Platform Transaction.</p>
+    <p>Prohibited conduct includes, but is not limited to:</p>
+    <ul>
+      <li>Sharing or requesting personal contact information (including phone numbers, email addresses, or social media handles) for the purpose of arranging transactions outside the Platform;</li>
+      <li>Directing or encouraging another user to complete a transaction outside the Platform, including via external payment methods, websites, or messaging services;</li>
+      <li>Attempting to bypass or avoid Gear's Marketplace Fee;</li>
+      <li>Listing items or communicating in a way intended to move transactions off-platform.</li>
+    </ul>
+    <p>Any Off-Platform Transaction is conducted at the users' own risk and is not covered by Buyer Protection or Seller Protection.</p>
+    <p>Gear may take enforcement action for violations of this policy, including:</p>
+    <ul>
+      <li>Removing listings;</li>
+      <li>Restricting or disabling account features;</li>
+      <li>Holding or reversing payouts;</li>
+      <li>Suspending or permanently banning accounts.</li>
+    </ul>
+    <p>Gear may monitor messages, listings, and activity for the purpose of detecting Off-Platform Transactions, fee circumvention, and fraud prevention, in accordance with our Privacy Policy.</p>
 
     <h2>12. Seller Responsibilities</h2>
     <ul>
@@ -483,7 +559,7 @@
       <li>The user has unpaid fees or a negative balance;</li>
       <li>Gear's automated systems or payment partners have flagged the account for suspicious activity.</li>
     </ul>
-    <p>Gear may preserve account and transaction data as needed to comply with financial regulations, fraud prevention requirements, payment partner rules, and law enforcement requests.</p>
+    <p>Gear may preserve account and transaction data as needed to comply with financial regulations, fraud prevention requirements, payment partner rules, and law enforcement requests. Accounts may only become eligible for deletion once all investigations, disputes, and compliance checks are fully resolved.</p>
 
     <h2>17. Changes to These Terms</h2>
     <p>We may update these Terms from time to time. If we make material changes, we may notify you via the App or by email. Your continued use of Gear after changes take effect constitutes acceptance of the revised Terms.</p>

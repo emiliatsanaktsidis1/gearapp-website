@@ -266,8 +266,9 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      gap: 40px;
-      padding: 30px 24px 0;
+      flex-wrap: wrap;
+      gap: 20px 40px;
+      padding: 30px 24px 0 220px;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -301,6 +302,23 @@
 
     .footer-copy {
       color: #666;
+      font-size: 13px;
+      width: 100%;
+      text-align: right;
+    }
+
+    @media (max-width: 968px) {
+      .nav-links {
+        display: none;
+      }
+
+      .logo-svg {
+        height: 180px;
+      }
+
+      .footer-logo-svg {
+        height: 160px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -316,12 +334,132 @@
       .category-title {
         font-size: 18px;
       }
-      .nav-links {
-        display: none;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        overflow-x: hidden;
       }
+
+      nav {
+        height: 90px;
+      }
+
+      .nav-content {
+        padding: 0 16px;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+      }
+
+      .nav-content .logo {
+        position: relative;
+        top: 20px;
+        left: auto;
+        transform: none;
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      .logo-svg {
+        height: 200px;
+      }
+
+      .nav-cta {
+        padding: 14px 24px;
+        font-size: 16px;
+        border-radius: 10px;
+      }
+
+      .content {
+        padding: 120px 16px 40px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .intro {
+        font-size: 16px;
+        margin-bottom: 32px;
+      }
+
+      .category-header {
+        padding: 12px 16px;
+      }
+
+      .category-icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      .category-title {
+        font-size: 16px;
+      }
+
+      .faq-question {
+        padding: 14px 16px;
+      }
+
+      .faq-question h3 {
+        font-size: 14px;
+      }
+
+      .faq-answer {
+        padding: 0 16px 14px;
+        font-size: 14px;
+      }
+
+      .support-cta h3 {
+        font-size: 20px;
+      }
+
+      .support-cta p {
+        font-size: 14px;
+      }
+
+      footer {
+        padding: 10px 0 40px;
+      }
+
+      footer::after {
+        height: 8px;
+      }
+
       .footer-content {
         flex-direction: column;
-        gap: 24px;
+        gap: 16px;
+        text-align: center;
+        padding: 20px 16px 0;
+      }
+
+      .footer-content .logo {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        order: -1;
+      }
+
+      .footer-logo-svg {
+        height: 120px;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+      }
+
+      .footer-links a {
+        font-size: 13px;
+      }
+
+      .footer-copy {
+        font-size: 11px;
         text-align: center;
       }
     }
@@ -548,7 +686,7 @@
             <h3>Can I edit a listing?</h3>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">Yes. Go to Profile → My Listings, select the item, and tap Edit. Note: Auction listings with bids have limited editing — you can add to the description and add new photos, but other fields are locked.</div>
+          <div class="faq-answer">Yes. Go to Profile &rarr; My Listings, select the item, and tap Edit. Note: Auction listings with bids have limited editing &mdash; you can add to the description and add new photos, but other fields are locked.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
@@ -583,7 +721,7 @@
             <h3>When do I get paid?</h3>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">Payouts are released when tracking confirms delivery. If tracking does not show delivery within 14 days, the order will enter manual review. Payouts will not be automatically released based solely on time. Once released, it typically takes 1–2 business days to reach your bank account.</div>
+          <div class="faq-answer">Payouts are released when tracking confirms delivery. If tracking does not show delivery within 14 days, the order will enter manual review. Payouts will not be automatically released based solely on time. Once released, it typically takes 1&ndash;2 business days to reach your bank account.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
@@ -604,7 +742,7 @@
             <h3>What are GEAR's fees?</h3>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">GEAR takes a 10% marketplace fee on the total sale amount (item price + shipping). This fee is automatically deducted from the seller's payout — buyers are not charged any additional fees.</div>
+          <div class="faq-answer">GEAR takes a 10% marketplace fee on the total sale amount (item price + shipping). This fee is automatically deducted from the seller's payout &mdash; buyers are not charged any additional fees.</div>
         </div>
       </div>
     </div>
@@ -753,12 +891,13 @@
         <img src="gear-logo-white.png" alt="GEAR" class="footer-logo-svg">
       </a>
       <div class="footer-links">
-        <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-of-service.html">Terms of Service</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="shipping-and-protection.html">Shipping &amp; Protection</a>
         <a href="contact.html">Contact</a>
         <a href="support.html">Support</a>
       </div>
-      <p class="footer-copy">&copy; 2026 GEAR GROUP PTY LTD (ABN 81 698 900 131). All rights reserved.</p>
+      <p class="footer-copy">GEAR&trade; &copy; 2026 GEAR DIGITAL. All rights reserved.</p>
     </div>
   </footer>
 

@@ -251,8 +251,9 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      gap: 40px;
-      padding: 30px 24px 0;
+      flex-wrap: wrap;
+      gap: 20px 40px;
+      padding: 30px 24px 0 220px;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -286,15 +287,20 @@
 
     .footer-copy {
       color: #666;
+      font-size: 13px;
+      width: 100%;
+      text-align: right;
     }
 
     @media (max-width: 968px) {
       .nav-links {
         display: none;
       }
+
       .logo-svg {
         height: 180px;
       }
+
       .footer-logo-svg {
         height: 160px;
       }
@@ -313,48 +319,98 @@
     }
 
     @media (max-width: 600px) {
+      body {
+        overflow-x: hidden;
+      }
+
       nav {
-        height: 70px;
+        height: 90px;
       }
 
       .nav-content {
-        padding: 12px 16px;
+        padding: 0 16px;
         justify-content: space-between;
+        align-items: center;
+        height: 100%;
       }
 
       .nav-content .logo {
         position: relative;
-        top: auto;
+        top: 20px;
         left: auto;
         transform: none;
+        display: flex;
+        align-items: center;
+        height: 100%;
       }
 
       .logo-svg {
-        height: 120px;
+        height: 200px;
       }
 
       .nav-cta {
-        padding: 8px 16px;
-        font-size: 14px;
+        padding: 14px 24px;
+        font-size: 16px;
+        border-radius: 10px;
       }
 
       .content {
-        padding: 90px 16px 40px;
+        padding: 120px 16px 40px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .intro {
+        font-size: 16px;
+        margin-bottom: 32px;
+      }
+
+      .contact-card {
+        padding: 24px;
+      }
+
+      .contact-card h3 {
+        font-size: 18px;
+      }
+
+      .contact-card p {
+        font-size: 14px;
+      }
+
+      .email-cta {
+        padding: 32px 20px;
+      }
+
+      .email-cta h2 {
+        font-size: 24px;
+      }
+
+      .email-cta p {
+        font-size: 15px;
+      }
+
+      .email-btn {
+        padding: 14px 24px;
+        font-size: 16px;
       }
 
       footer {
-        padding: 20px 0 30px;
+        padding: 10px 0 40px;
       }
 
       footer::after {
-        height: 30px;
+        height: 8px;
       }
 
       .footer-content {
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
         text-align: center;
-        padding-top: 20px;
+        padding: 20px 16px 0;
       }
 
       .footer-content .logo {
@@ -366,21 +422,22 @@
       }
 
       .footer-logo-svg {
-        height: 100px;
+        height: 120px;
       }
 
       .footer-links {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 16px;
+        gap: 10px 20px;
       }
 
       .footer-links a {
-        font-size: 14px;
+        font-size: 13px;
       }
 
       .footer-copy {
-        font-size: 12px;
+        font-size: 11px;
+        text-align: center;
       }
     }
   </style>
@@ -451,12 +508,13 @@
         <img src="gear-logo-white.png" alt="GEAR" class="footer-logo-svg">
       </a>
       <div class="footer-links">
-        <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-of-service.html">Terms of Service</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="shipping-and-protection.html">Shipping &amp; Protection</a>
         <a href="contact.html">Contact</a>
         <a href="support.html">Support</a>
       </div>
-      <p class="footer-copy">&copy; 2026 GEAR GROUP PTY LTD (ABN 81 698 900 131). All rights reserved.</p>
+      <p class="footer-copy">GEAR&trade; &copy; 2026 GEAR DIGITAL. All rights reserved.</p>
     </div>
   </footer>
 </body>

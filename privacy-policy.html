@@ -1,472 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - GEAR</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GEAR – Privacy Policy</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --bg:#0b0f14;
+      --card:#0f1620;
+      --text:#e8eef6;
+      --muted:#a9b4c2;
+      --link:#00bcd4;
+      --border:rgba(255,255,255,0.08);
     }
-
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #ffffff;
-      color: #333;
-      line-height: 1.6;
+      margin:0; padding:0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
     }
-
-    /* Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 84px;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      z-index: 100;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-content {
-      position: relative;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 32px;
-      padding: 16px 24px;
-      max-width: 1200px;
-      margin: 0 auto;
-      height: 100%;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 24px;
-      font-weight: 800;
-      color: #00bcd4;
-      text-decoration: none;
-    }
-
-    .nav-content .logo {
-      position: absolute;
-      top: 50%;
-      left: -5px;
-      transform: translateY(-38%);
-    }
-
-    .logo-svg {
-      height: 250px;
-      width: auto;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-    }
-
-    .nav-links a {
-      color: #666;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover {
-      color: #00bcd4;
-    }
-
-    .nav-cta {
-      background: #00bcd4;
-      color: #000;
-      padding: 10px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .nav-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 20px rgba(0, 188, 212, 0.4);
-    }
-
-    /* Content */
-    .content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 120px 24px 80px;
-    }
-
-    .content h1 {
-      font-size: 36px;
-      font-weight: 800;
-      margin-bottom: 8px;
-      color: #333;
-    }
-
-    .content .updated {
-      color: #666;
-      margin-bottom: 40px;
-      font-style: italic;
-    }
-
-    .content h2 {
-      font-size: 24px;
-      font-weight: 700;
-      margin-top: 40px;
-      margin-bottom: 16px;
-      color: #333;
-    }
-
-    .content h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin-top: 24px;
-      margin-bottom: 12px;
-      color: #333;
-    }
-
-    .content p {
-      margin-bottom: 16px;
-      color: #555;
-    }
-
-    .content ul {
-      margin-left: 24px;
-      margin-bottom: 16px;
-    }
-
-    .content li {
-      margin-bottom: 8px;
-      color: #555;
-    }
-
-    .content strong {
-      color: #333;
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid #333;
-      padding: 10px 0 40px 0;
-      background: #1a1a1a;
-      overflow: visible;
-      position: relative;
-    }
-
-    footer::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 50px;
-      background: #1a1a1a;
-      transform: translateY(100%);
-      z-index: -1;
-    }
-
-    .footer-content {
-      position: relative;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px 40px;
-      padding: 30px 24px 0 220px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .footer-content .logo {
-      position: absolute;
-      bottom: 0;
-      left: -10px;
-      transform: translateY(48%);
-    }
-
-    .footer-logo-svg {
-      height: 220px;
-      width: auto;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 32px;
-    }
-
-    .footer-links a {
-      color: #999;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover {
-      color: #00bcd4;
-    }
-
-    .footer-copy {
-      color: #666;
-      font-size: 13px;
-      width: 100%;
-      text-align: right;
-    }
-
-    @media (max-width: 968px) {
-      .nav-links {
-        display: none;
-      }
-
-      .logo-svg {
-        height: 180px;
-      }
-
-      .footer-logo-svg {
-        height: 160px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      body {
-        overflow-x: hidden;
-      }
-
-      nav {
-        height: 90px;
-      }
-
-      .nav-content {
-        padding: 0 16px;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-      }
-
-      .nav-content .logo {
-        position: relative;
-        top: 20px;
-        left: auto;
-        transform: none;
-        display: flex;
-        align-items: center;
-        height: 100%;
-      }
-
-      .logo-svg {
-        height: 200px;
-      }
-
-      .nav-cta {
-        padding: 14px 24px;
-        font-size: 16px;
-        border-radius: 10px;
-      }
-
-      .content {
-        padding: 120px 16px 40px;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-      }
-
-      .content h1 {
-        font-size: 26px;
-      }
-
-      .content h2 {
-        font-size: 20px;
-        margin-top: 32px;
-      }
-
-      .content h3 {
-        font-size: 16px;
-      }
-
-      .content p, .content li {
-        font-size: 15px;
-      }
-
-      .content ul {
-        margin-left: 20px;
-      }
-
-      footer {
-        padding: 10px 0 40px;
-      }
-
-      footer::after {
-        height: 8px;
-      }
-
-      .footer-content {
-        flex-direction: column;
-        gap: 16px;
-        text-align: center;
-        padding: 20px 16px 0;
-      }
-
-      .footer-content .logo {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        transform: none;
-        order: -1;
-      }
-
-      .footer-logo-svg {
-        height: 120px;
-      }
-
-      .footer-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px 20px;
-      }
-
-      .footer-links a {
-        font-size: 13px;
-      }
-
-      .footer-copy {
-        font-size: 11px;
-        text-align: center;
-      }
-    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 60px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
+    h1 { margin: 0 0 6px; font-size: 32px; letter-spacing: -0.02em; }
+    h2 { margin-top: 26px; font-size: 22px; }
+    h3 { margin-top: 18px; font-size: 18px; }
+    p, li { color: var(--text); }
+    .muted { color: var(--muted); }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 22px; }
+    ol { padding-left: 22px; }
+    hr { border:0; border-top:1px solid var(--border); margin: 18px 0; }
+    .pill { display:inline-block; padding: 2px 10px; border:1px solid var(--border); border-radius: 999px; color: var(--muted); font-size: 12px; }
+    .toc a { display:block; padding: 6px 0; }
+    .note { background: rgba(0,188,212,0.10); border: 1px solid rgba(0,188,212,0.25); padding: 12px 14px; border-radius: 12px; }
+    code { background: rgba(255,255,255,0.06); padding: 0 6px; border-radius: 6px; }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-content">
-      <a href="index.html" class="logo">
-        <img src="gear-logo.svg" alt="GEAR" class="logo-svg">
-      </a>
-      <div class="nav-links">
-        <a href="index.html#features">Features</a>
-        <a href="index.html#download">Download</a>
-      </div>
-      <a href="index.html#download" class="nav-cta">Get the App</a>
+  <div class="wrap">
+    <div class="card">
+      <h1>Gear – Privacy Policy</h1>
+      <p class="muted"><strong>Last updated:</strong> 19 March 2026</p>
+      
+<p>Gear is operated by <strong>GEAR GROUP PTY LTD</strong> (ABN 81 698 900 131, ACN 698 900 131).</p>
+<p>Welcome to Gear (“we”, “us”, “our”). We are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application and services.</p>
+<p>By using Gear, you consent to the collection and use of your information in accordance with this Privacy Policy.</p>
+
+<h2>1. Information We Collect</h2>
+
+<h3>1.1 Information You Provide Directly</h3>
+<p><strong>Account information</strong> may include your name, email address, phone number, password (stored securely), profile photo (optional), and date of birth (for eligibility checks).</p>
+
+<p><strong>Listing information</strong> may include item descriptions and photos, vehicle/compatibility information, pricing, and approximate location information.</p>
+
+<p><strong>Transaction information</strong> may include shipping and delivery addresses, purchase and sales history, and messages between buyers and sellers.</p>
+
+<p><strong>Auction and bidding information</strong> (where enabled) may include bid amounts, bid timestamps, bid history for a listing, auction end times, anti‑sniping extensions, and auction payment deadlines.</p>
+
+<h3>1.2 Information Collected Automatically</h3>
+<ul>
+  <li>Device information (model, operating system, unique identifiers);</li>
+  <li>IP address and general location (e.g., city/region);</li>
+  <li>App usage data (pages viewed, buttons tapped, time spent);</li>
+  <li>Search queries and browsing activity within the App;</li>
+  <li>Crash logs and performance data.</li>
+</ul>
+
+<h3>1.3 Payment Information (via Stripe)</h3>
+<p>Payments are processed by Stripe. We do not collect or store full credit card numbers on our servers. Stripe provides us with limited payment information (such as card type, last four digits, and payment status) so that we can confirm payments, manage orders, and process payouts.</p>
+
+<h3>1.4 Information From Third Parties</h3>
+<ul>
+  <li>Identity and verification information from payment providers (e.g., Stripe) when required for payouts;</li>
+  <li>Optional vehicle or part information from third‑party lookup or reference services;</li>
+  <li>Information from analytics and crash‑reporting tools (e.g., Firebase).</li>
+</ul>
+
+<h2>2. How We Use Your Information</h2>
+<ul>
+  <li>Create and manage your Gear account;</li>
+  <li>Enable buying and selling of car parts between users;</li>
+  <li>Facilitate in‑app messaging, notifications, and order updates;</li>
+  <li>Process payments and payouts via Stripe;</li>
+  <li>Operate auctions and bidding features (including anti‑sniping extensions and payment deadlines);</li>
+  <li>Provide customer support and respond to enquiries;</li>
+  <li>Analyse how the App is used to improve functionality and performance;</li>
+  <li>Monitor for and detect fraud, scams, and suspicious activity;</li>
+  <li>Enforce our Terms of Service and other policies.</li>
+</ul>
+
+<h2>3. How We Share Your Information</h2>
+
+<h3>3.1 With Other Users</h3>
+<ul>
+  <li>Your public profile information (such as username, profile photo, general location, and listings) may be visible to other users.</li>
+  <li>Buyers and sellers may see each other’s usernames and relevant order details for a transaction.</li>
+  <li>For auctions, we may display listing‑level auction information such as <em>current bid</em>, <em>bid count</em>, and <em>time remaining</em>. We do not intend to publicly display your full identity as a bidder beyond what is necessary to operate the transaction.</li>
+</ul>
+
+<h3>3.2 With Service Providers</h3>
+<p>We share information with trusted third parties that help us operate the App, including Stripe (payments, risk checks, and identity verification), Firebase/Google Cloud (authentication, database, storage, analytics, and crash reporting), email and SMS providers, and analytics providers. These providers only access your information to perform services on our behalf and are required to protect it appropriately.</p>
+
+<h3>3.3 For Legal and Safety Reasons</h3>
+<p>We may disclose information where required by law or to protect the rights, property, or safety of Gear, our users, or others, and to detect, prevent, or address fraud, security, or technical issues.</p>
+
+<h2>4. Data Security</h2>
+<p>We use reasonable technical and organisational measures to protect your information, including encryption in transit (TLS/SSL), access controls, secure authentication mechanisms, and regular monitoring. However, no method of transmission or storage is completely secure.</p>
+
+<h2>5. Data Retention</h2>
+<p>We retain your personal information for as long as necessary to provide the Services, comply with legal obligations, resolve disputes, enforce our agreements, and prevent fraud.</p>
+<p>Transaction records may be retained for up to 7 years (or longer where required) for tax, financial reporting, regulatory compliance, and audit purposes.</p>
+<p>Auction and bid records may be retained as necessary to operate the Platform, resolve disputes, and maintain marketplace integrity.</p>
+<p>Where permitted, we may retain and use de-identified or aggregated information for analytics, service improvement, and fraud prevention.</p>
+<p>We may also retain information where required to comply with investigations, legal claims, or enforcement of our Terms, including where an account is restricted or pending deletion.</p>
+<p>When personal information is no longer required, we will take reasonable steps to delete or de-identify it in accordance with applicable laws.</p>
+
+<h2>6. Your Rights and Choices</h2>
+<ul>
+  <li>You can access and update much of your account information in the Platform.</li>
+  <li>You may request deletion of your account through the Platform, subject to legal and operational requirements (including fraud and dispute investigations).</li>
+  <li>You can manage your notification preferences through the Platform settings, including opting out of specific notification categories. Transactional and service-related communications (such as order updates and shipping notifications) may still be sent where necessary to operate the Platform.</li>
+  <li>You can manage push notification permissions through your device settings.</li>
+</ul>
+
+<h2>7. Children and Minors</h2>
+<p>Gear is not intended for use by individuals under 18. You must be at least 18 years old to use the App.</p>
+
+<h2>8. International Data Transfers</h2>
+<p>Our service providers may be located in countries other than your own. Where required, we take steps to ensure appropriate safeguards are in place.</p>
+
+<h2>9. Australian Privacy Principles</h2>
+<p>Where applicable, we aim to comply with the Australian Privacy Principles under the Privacy Act 1988.</p>
+
+<h2>10. Changes to This Privacy Policy</h2>
+<p>We may update this Privacy Policy from time to time. If we make material changes, we may notify you via the App or by email.</p>
+
+<h2>11. Contact Us</h2>
+<p>If you have questions or requests about this Privacy Policy, contact: <a href="mailto:support@gearapp.com.au">support@gearapp.com.au</a></p>
+<p><strong>GEAR GROUP PTY LTD</strong> (ABN 81 698 900 131, ACN 698 900 131)</p>
+
     </div>
-  </nav>
-
-  <!-- Content -->
-  <div class="content">
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 19 March 2026</p>
-
-    <h2>1. Introduction</h2>
-    <p>Welcome to <strong>Gear</strong> ("we", "us", "our"). We are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application and services.</p>
-    <p>By using Gear, you consent to the collection and use of your information in accordance with this Privacy Policy.</p>
-
-    <h2>2. Information We Collect</h2>
-
-    <h3>2.1 Information You Provide Directly</h3>
-    <p>Account information may include your name, email address, phone number, password (stored securely), profile photo (optional), and date of birth (for eligibility checks).</p>
-    <p>Listing information may include item descriptions and photos, vehicle/compatibility information, pricing, and approximate location information.</p>
-    <p>Transaction information may include shipping and delivery addresses, purchase and sales history, and messages between buyers and sellers.</p>
-    <p>Auction and bidding information (where enabled) may include bid amounts, bid timestamps, bid history for a listing, auction end times, anti-sniping extensions, and auction payment deadlines.</p>
-
-    <h3>2.2 Information Collected Automatically</h3>
-    <ul>
-      <li>Device information (model, operating system, unique identifiers);</li>
-      <li>IP address and general location (e.g., city/region);</li>
-      <li>App usage data (pages viewed, buttons tapped, time spent);</li>
-      <li>Search queries and browsing activity within the App;</li>
-      <li>Crash logs and performance data.</li>
-    </ul>
-
-    <h3>2.3 Payment Information (via Stripe)</h3>
-    <p>Payments are processed by <strong>Stripe</strong>. We do not collect or store full credit card numbers on our servers. Stripe provides us with limited payment information (such as card type, last four digits, and payment status) so that we can confirm payments, manage orders, and process payouts.</p>
-
-    <h3>2.4 Information From Third Parties</h3>
-    <ul>
-      <li>Identity and verification information from payment providers (e.g., Stripe) when required for payouts;</li>
-      <li>Optional vehicle or part information from third-party lookup or reference services;</li>
-      <li>Information from analytics and crash-reporting tools (e.g., Firebase).</li>
-    </ul>
-
-    <h2>3. How We Use Your Information</h2>
-    <ul>
-      <li>Create and manage your Gear account;</li>
-      <li>Enable buying and selling of car parts between users;</li>
-      <li>Facilitate in-app messaging, notifications, and order updates;</li>
-      <li>Process payments and payouts via Stripe;</li>
-      <li>Operate auctions and bidding features (including anti-sniping extensions and payment deadlines);</li>
-      <li>Provide customer support and respond to enquiries;</li>
-      <li>Analyse how the App is used to improve functionality and performance;</li>
-      <li>Monitor for and detect fraud, scams, and suspicious activity;</li>
-      <li>Enforce our Terms of Service and other policies.</li>
-    </ul>
-
-    <h2>4. How We Share Your Information</h2>
-
-    <h3>4.1 With Other Users</h3>
-    <p>Your public profile information (such as username, profile photo, general location, and listings) may be visible to other users. Buyers and sellers may see each other's usernames and relevant order details for a transaction. For auctions, we may display listing-level auction information such as current bid, bid count, and time remaining. We do not intend to publicly display your full identity as a bidder beyond what is necessary to operate the transaction.</p>
-
-    <h3>4.2 With Service Providers</h3>
-    <p>We share information with trusted third parties that help us operate the App, including Stripe (payments, risk checks, and identity verification), Firebase/Google Cloud (authentication, database, storage, analytics, and crash reporting), email and SMS providers, and analytics providers. These providers only access your information to perform services on our behalf and are required to protect it appropriately.</p>
-
-    <h3>4.3 For Legal and Safety Reasons</h3>
-    <p>We may disclose information where required by law or to protect the rights, property, or safety of Gear, our users, or others, and to detect, prevent, or address fraud, security, or technical issues.</p>
-
-    <h2>5. Data Security</h2>
-    <p>We use reasonable technical and organisational measures to protect your information, including encryption in transit (TLS/SSL), access controls, secure authentication mechanisms, and regular monitoring. However, no method of transmission or storage is completely secure.</p>
-
-    <h2>6. Data Retention</h2>
-    <p>We retain your personal information for as long as necessary to provide the Services, comply with legal obligations, resolve disputes, enforce our agreements, and prevent fraud.</p>
-    <p>Transaction records may be retained for up to 7 years (or longer where required) for tax, financial reporting, regulatory compliance, and audit purposes.</p>
-    <p>Auction and bid records may be retained as necessary to operate the Platform, resolve disputes, and maintain marketplace integrity.</p>
-    <p>Where permitted, we may retain and use de-identified or aggregated information for analytics, service improvement, and fraud prevention.</p>
-    <p>We may also retain information where required to comply with investigations, legal claims, or enforcement of our Terms, including where an account is restricted or pending deletion.</p>
-    <p>When personal information is no longer required, we will take reasonable steps to delete or de-identify it in accordance with applicable laws.</p>
-
-    <h2>7. Your Rights and Choices</h2>
-    <ul>
-      <li>You can access and update much of your account information in the Platform.</li>
-      <li>You may request deletion of your account through the Platform, subject to legal and operational requirements (including fraud and dispute investigations).</li>
-      <li>You can manage your notification preferences through the Platform settings, including opting out of specific notification categories. Transactional and service-related communications (such as order updates and shipping notifications) may still be sent where necessary to operate the Platform.</li>
-      <li>You can manage push notification permissions through your device settings.</li>
-    </ul>
-
-    <h2>8. Children and Minors</h2>
-    <p>Gear is not intended for use by individuals under 18. You must be at least 18 years old to use the App.</p>
-
-    <h2>9. International Data Transfers</h2>
-    <p>Our service providers may be located in countries other than your own. Where required, we take steps to ensure appropriate safeguards are in place.</p>
-
-    <h2>10. Australian Privacy Principles</h2>
-    <p>Where applicable, we aim to comply with the Australian Privacy Principles under the Privacy Act 1988.</p>
-
-    <h2>11. Changes to This Privacy Policy</h2>
-    <p>We may update this Privacy Policy from time to time. If we make material changes, we may notify you via the App or by email.</p>
-
-    <h2>12. Contact Us</h2>
-    <p>If you have questions or requests about this Privacy Policy, contact: <strong>support@gearapp.com.au</strong></p>
   </div>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <a href="index.html" class="logo">
-        <img src="gear-logo-white.png" alt="GEAR" class="footer-logo-svg">
-      </a>
-      <div class="footer-links">
-        <a href="terms-of-service.html">Terms of Service</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="shipping-and-protection.html">Shipping &amp; Protection</a>
-        <a href="contact.html">Contact</a>
-        <a href="support.html">Support</a>
-      </div>
-      <p class="footer-copy">GEAR&trade; &copy; 2026 GEAR DIGITAL. All rights reserved.</p>
-    </div>
-  </footer>
 </body>
 </html>

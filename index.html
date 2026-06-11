@@ -99,7 +99,7 @@
     .footer-content .logo {
       position: absolute;
       bottom: 0;
-      left: -20px;
+      left: -10px;
       transform: translateY(48%);
     }
 
@@ -421,11 +421,8 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 20px 40px;
-      padding: 30px 24px 0 220px;
-      max-width: 1200px;
-      margin: 0 auto;
+      gap: 40px;
+      padding-top: 30px;
     }
 
     footer .logo {
@@ -449,9 +446,6 @@
 
     .footer-copy {
       color: #666;
-      font-size: 13px;
-      width: 100%;
-      text-align: right;
     }
 
     /* Responsive */
@@ -505,52 +499,42 @@
       }
 
       nav {
-        height: 90px;
+        height: 70px;
       }
 
       .nav-content {
-        padding: 0 16px;
+        padding: 12px 16px;
         justify-content: space-between;
-        align-items: center;
-        height: 100%;
       }
 
       .nav-content .logo {
         position: relative;
-        top: 20px;
+        top: auto;
         left: auto;
         transform: none;
-        display: flex;
-        align-items: center;
-        height: 100%;
       }
 
       .logo-svg {
-        height: 200px;
+        height: 120px;
       }
 
       .nav-cta {
-        padding: 14px 24px;
-        font-size: 16px;
-        border-radius: 10px;
+        padding: 8px 16px;
+        font-size: 14px;
       }
 
       .hero {
-        padding-top: 120px;
+        padding-top: 70px;
         min-height: auto;
-        padding-bottom: 30px;
+        padding-bottom: 40px;
       }
 
       .hero-text h1 {
-        font-size: 44px;
-        margin-bottom: 20px;
+        font-size: 32px;
       }
 
       .hero-text p {
-        font-size: 22px;
-        font-weight: 600;
-        margin-top: 40px;
-        margin-bottom: 60px;
+        font-size: 16px;
       }
 
       .hero-buttons {
@@ -624,18 +608,18 @@
       }
 
       footer {
-        padding: 10px 0 40px;
+        padding: 20px 0 30px;
       }
 
       footer::after {
-        height: 8px;
+        height: 30px;
       }
 
       .footer-content {
         flex-direction: column;
-        gap: 16px;
+        gap: 20px;
         text-align: center;
-        padding: 20px 16px 0;
+        padding-top: 20px;
       }
 
       .footer-content .logo {
@@ -647,22 +631,21 @@
       }
 
       .footer-logo-svg {
-        height: 120px;
+        height: 100px;
       }
 
       .footer-links {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px 20px;
+        gap: 16px;
       }
 
       .footer-links a {
-        font-size: 13px;
+        font-size: 14px;
       }
 
       .footer-copy {
-        font-size: 11px;
-        text-align: center;
+        font-size: 12px;
       }
     }
   </style>
@@ -812,18 +795,19 @@
 
   <!-- Footer -->
   <footer>
-    <div class="footer-content">
-      <a href="index.html" class="logo">
-        <img src="gear-logo-white.png" alt="GEAR" class="footer-logo-svg">
-      </a>
-      <div class="footer-links">
-        <a href="terms-of-service.html">Terms of Service</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="shipping-and-protection.html">Shipping &amp; Protection</a>
-        <a href="contact.html">Contact</a>
-        <a href="support.html">Support</a>
+    <div class="container">
+      <div class="footer-content">
+        <a href="index.html" class="logo">
+          <img src="gear-logo-white.png" alt="GEAR" class="footer-logo-svg">
+        </a>
+        <div class="footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="contact.html">Contact</a>
+          <a href="support.html">Support</a>
+        </div>
+        <p class="footer-copy">© 2026 GEAR GROUP PTY LTD (ABN 81 698 900 131). All rights reserved.</p>
       </div>
-      <p class="footer-copy">GEAR&trade; &copy; 2026 GEAR DIGITAL. All rights reserved.</p>
     </div>
   </footer>
 </body>

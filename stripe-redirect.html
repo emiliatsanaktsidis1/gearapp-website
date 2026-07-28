@@ -119,6 +119,21 @@
 
     // Show status immediately
     updateUI();
+
+    // Bounce straight back into the app. Stripe requires an https return_url,
+    // so this page exists only to hand off to the gearapp:// deep link. When
+    // onboarding was opened with openAuthSessionAsync, hitting this scheme
+    // closes the browser sheet automatically and returns the seller to GEAR —
+    // no "please switch back to the app" step. If the app isn't installed or
+    // the scheme fails, the message rendered above remains as the fallback.
+    try {
+      const deepLink = 'gearapp://seller-onboarding/stripe-return'
+        + '?action=' + encodeURIComponent(action)
+        + (status ? '&status=' + encodeURIComponent(status) : '');
+      window.location.href = deepLink;
+    } catch (e) {
+      /* leave the on-page instructions visible */
+    }
   </script>
 </body>
 </html>

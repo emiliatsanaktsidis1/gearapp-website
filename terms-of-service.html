@@ -379,7 +379,7 @@
       <li><strong>"Supported Carrier"</strong> means Australia Post, DHL, FedEx, UPS, StarTrack, TNT, Aramex, or Couriers Please.</li>
       <li><strong>"Tracked Shipping"</strong> means a shipment sent via a Supported Carrier with Valid Tracking.</li>
       <li><strong>"Valid Tracking"</strong> means a tracking number issued by a Supported Carrier that shows verifiable shipment progress and delivery status.</li>
-      <li><strong>"Delivery Confirmation"</strong> means a tracking status provided by a Supported Carrier indicating that an item has been delivered to the Order Address or delivery area.</li>
+      <li><strong>"Delivery Confirmation"</strong> means confirmation that an item has been delivered, established by any of: (a) a tracking status from a Supported Carrier indicating delivery to the Order Address or delivery area; (b) the Buyer confirming receipt in the App; or (c) automatic confirmation by Gear where neither (a) nor (b) occurs within 10 business days of shipment, except where a dispute is open.</li>
       <li><strong>"Stripe"</strong> means the third-party payment processing platform used by Gear to facilitate payments and payouts.</li>
       <li><strong>"Stripe Connect"</strong> means the Stripe service that enables Sellers to receive payouts from sales on the Platform.</li>
       <li><strong>"In-App Payment System"</strong> means the payment system provided through the Platform using Stripe or other approved payment providers.</li>
@@ -422,10 +422,10 @@
     <h3>6.3 Payout Holds &amp; Release Schedule</h3>
     <p>To protect buyers and maintain marketplace integrity, seller payouts are held until fulfilment is confirmed. Payouts may also be subject to additional verification checks by Stripe or Gear before release.</p>
     <ul>
-      <li>Payouts are released when tracking confirms Delivery Confirmation.</li>
-      <li>If tracking does not show delivery within 14 days, the order will enter manual review.</li>
-      <li>Payouts will not be automatically released based solely on time.</li>
-      <li>Gear may release payouts where tracking shows active transit and there are no disputes, fraud indicators, or policy violations.</li>
+      <li>Delivery Confirmation occurs when carrier tracking shows delivery, when the Buyer confirms receipt in the App, or automatically 10 business days after shipment if neither has occurred (except where a dispute is open).</li>
+      <li>Following Delivery Confirmation, a seller's payout is released after a buffer of 3 business days, provided no dispute, fraud indicator, or policy violation applies.</li>
+      <li>A payout is held for the duration of any open dispute, chargeback, or investigation, and is not released while unresolved.</li>
+      <li>Payouts may be subject to additional verification by Stripe or Gear before release.</li>
     </ul>
     <p>Business days exclude weekends (Saturday and Sunday) and are calculated based on Australian Eastern Time.</p>
 
